@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4</title>
+</head>
+
+<body>
+    Digite a primeira nota:
+    <br>
+    <input type="number" id="nota_1" placeholder="Digite a cidade natal">
+    <br><br>
+    Digite a segunda nota:
+    <br>
+    <input type="number" id="nota_2" placeholder="Digita a data de nascimento">
+    <br><br>
+    <button onclick="bt_calcular()">Calcular média</button>
+    <br><br>
+    <div id="div_text">
+
+    </div>
+
+
+</body>
+
+</html>
+<script>
+    function bt_calcular() {  
+    div_text.innerHTML = `Sua média foi de ${(Number(nota_1.value) + Number(nota_2.value)) / 2} `;
+    }
+</script>

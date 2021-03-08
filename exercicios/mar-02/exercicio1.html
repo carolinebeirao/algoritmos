@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+</head>
+
+<body>
+    Digite a sua cidade natal:
+    <input type="text" id="cid" placeholder="Digite a cidade natal">
+    <br>
+    Ano de nascimento:
+    <input type="date" id="nasc" placeholder="Digita a data de nascimento">
+    <button onclick="bt_cadastrar()" >Cadastrar</button>
+    
+
+</body>
+
+</html>
+<script>
+    function bt_cadastrar() {
+        alert (`Você nasceu na cidade de ${cid.value} em ${nasc.value}`) 
+    }
+</script>

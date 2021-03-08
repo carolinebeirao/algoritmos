@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 19 Atalhos Matemáticos</title>
+</head>
+
+<body>
+    <h3>Vamos fazer contas mais facilmente??</h3>
+    <input id="numero" placeholder="Número qualquer">
+    <br><br>
+    <button onclick="aumentarx()">Aumentar em x</button>
+    <button onclick="reduzirx()">Reduzir em x</button>
+    <button onclick="aumentar1simples()">Aumentar em 1 (método simples)</button>
+    <button onclick="reduzir1simples()">Reduzir em 1 (método simples)</button>
+</body>
+
+</html>
+<script>
+    function aumentarx() {
+        var result = Number(numero.value);
+
+	// neste caso estamos somando 5 (mas poderia ser qualquer número) na variável result
+	//       e atribuindo o resultado na variável result
+        // result = result + 5;  // Este seria o comando "convencional"
+
+        result += 5;
+        alert(result);
+    }
+    function reduzirx() {
+	// neste caso estamos subtraindo 5 (mas poderia ser qualquer número) da variável result
+	//       e atribuindo o resultado na variável result
+
+        var result = Number(numero.value);
+        result -= 5;
+        alert(result);
+    }
+    function aumentar1simples() {
+	// forma simplificada de adicionar 1 no conteúdo de uma variável
+
+        var result = Number(numero.value);
+        result++;
+        alert(result);
+    }
+    function reduzir1simples() {
+	// forma simplificada de reduzir 1 do conteúdo de uma variável
+
+        var result = Number(numero.value);
+        // result = result - 1;
+        result--;
+        alert(result);
+    }
+
+</script>

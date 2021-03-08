@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 10</title>
+</head>
+<body>
+<!--
+    tag <button> -> desenha um botão simples na tela.
+-->
+    <button onclick="gol()" >Gol!</button>
+    <button onclick="trave()" >Na trave!</button>
+    <button onclick="falta()" >Cartão!</button>
+    <br><br>
+    <!--div#nomedoidaqui-->
+    <div id="div_acontecimentos">
+        <h3>Agora no jogo...</h3>
+    </div>
+</body>
+</html>
+
+<script>
+    function gol() {
+        div_acontecimentos.innerHTML += '<br>GOOOOOOLLLLL!!!!!';
+    }
+    function trave() {
+        div_acontecimentos.innerHTML += '<br>UUUUUUUH, Quase!!!';
+    }
+    function falta() {
+        div_acontecimentos.innerHTML += '<br>É falta!!!';
+    }
+</script>

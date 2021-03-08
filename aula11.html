@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 10</title>
+</head>
+<body>
+<!--
+    tag <button> -> desenha um botão simples na tela.
+-->
+    <button onclick="corinthians()" >Corinthians!</button>
+    <button onclick="palmeiras()" >Palmeiras!</button>
+    <button onclick="santos()" >Santos!</button>
+    <button onclick="sao_paulo()" >São Paulo!</button>
+    <br>
+    <br>
+    <!--div#nomedoidaqui-->
+    <div id="div_msg">
+        aqui será a mensgem do time escolhido
+    </div>
+</body>
+</html>
+
+<script>
+    function corinthians() {
+        div_msg.innerHTML = 'Que mal gosto hein!';
+    }
+    function palmeiras() {
+        div_msg.innerHTML = 'Não tem mundial! <br> outra mensagem na linha de baixo';
+    }
+    function santos() {
+        div_msg.innerHTML ('Só aparece no churrasco!');
+    }
+    function sao_paulo() {
+        div_msg.innerHTML = ('Tri campeão!!!');
+    }
+</script>

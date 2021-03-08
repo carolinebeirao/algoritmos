@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula 16 - Trocando uma imagem</title>
+</head>
+<body>
+    
+    <h3>Mudança de tempo</h3>
+
+    <button onclick="nublado()">Mudar para Nublado</button>
+    <button onclick="chuvoso()">Mudar para Chuvoso</button>
+
+    <br>
+    <div id="div_clima">
+        O clima é algo que muda muito!
+    </div>
+    <br>
+    <img id="img_clima" src="dia-ensolarado.jpg" 
+    style="height: 200px;">
+
+</body>
+</html>
+
+<script>
+
+/*  Para alterar o atributo de uma tag no JS deve-se passar: o id da tag,
+    seguido de um ponto, qual o atributo,sinal de igual e o valor desejado entre aspas
+    Exemplo da alteração do atributo src de uma imagem:
+        img_clima.src = "dia-nublado.jpg";
+            |      |            |
+        id da tag  |            |   
+                atributo        |
+                              valor 
+
+    */
+    
+function nublado() {
+    img_clima.src = "dia-nublado.jpg";
+    div_clima.style.backgroundColor = 'grey';
+}
+
+function chuvoso() {
+    img_clima.src = "dia-chuvoso.jpg";
+    div_clima.style.backgroundColor = 'blue';
+}
+</script>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5</title>
+</head>
+<body>
+    
+    <h2>Brasil x Alemanha</h2>
+
+    <button onclick="bt_gol_br()">Gol do Brasil</button>
+    <button onclick="bt_gol_ale()"> Gol da Alemanha</button>
+    <button onclick="bt_sumir_gol()">Recomeçar partida</button>
+
+    <p><b>Tempo real do jogo:</b></p>
+    <div id="div_Gol"></div>
+    
+</body>
+</html>
+
+<script>
+    function bt_gol_br() {
+        div_Gol.innerHTML += '<span style="color:green;"> É goooolll</b> do Brasil!!!</span><br>';
+   }
+
+   function bt_gol_ale() {
+       div_Gol.innerHTML += '<span style="color:yellow; background-color:red;">É goooolll</b> da Alemanha!!!<br>';
+   }
+
+   function bt_sumir_gol() {
+        div_Gol.innerHTML = '';
+   }
+</script>

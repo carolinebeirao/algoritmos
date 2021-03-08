@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula17 Input</title>
+</head>
+
+<body>
+    <!--
+        A tag input cria um campo para entrada de dados
+        Vamos SEMPRE usar o type="text" (ou omitir este atributo)
+        Vamos SEMPRE usar o atributo id
+        
+        O atributo placeholder cria um texto temporário
+        dentro do próprio campo
+    
+        Regras para valor de id: 
+        1. todas as letras devem ser minúsculas
+        2. não começar com número 
+        3. pode ter número no meio ou fim
+        4. a cada "palavra", usar "_" (underline)
+        ex: telefone_comercial, quantidade_filhos
+        5. NÃO pode ter espaço em branco
+        6. NÃO usar nomes de tags (body, h3, img, div etc)
+        7. NÃO usar caracteres especiais (acentos, cedilha, etc)
+    -->
+
+    Entre com o seu <b> primeiro nome: </b>
+    <input type="text" id="pri_nome" placeholder="Primeiro Nome">
+    <br>
+    Entre com o seu <b> último nome: </b>
+    <input id="seg_nome" placeholder="ENTRE COM O SEGUNDO NOME">
+    <br>
+    <button onclick="incluir()" style="background: red; color: green;">Incluir</button>
+    <br>
+    <div id="div_mens">
+        <h4>Mini Cadastro</h4>
+    </div>
+</body>
+
+</html>
+
+<script>
+    function incluir() {
+        // usando o id de uma tab de input e depois o .value recuperamos o valor que foi digitado nela
+        // alert ("seu nome é: " + primeiro.value + '     ' + ultimo.value);
+
+        // Aqui usamos a Concatenação
+        // Inicializamos e Finalizamos o texto com aspas simples ou duplas
+        // a concatenação é feita com o simbolo "+" (sinal de mais)
+
+        div_mens.innerHTML += '<b>Seu nome completo é:</b>' + 
+            pri_nome.value + ' ' + seg_nome.value + '<br>';
+ 
+	//Aqui estamos limpando o conteúdo de um campo de input       
+        pri_nome.value = '';
+        seg_nome.value = "";
+    }
+
+</script>

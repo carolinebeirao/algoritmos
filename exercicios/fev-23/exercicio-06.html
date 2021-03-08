@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6</title>
+</head>
+<body>
+    
+    <h1> O que faz um triatleta</h1>
+
+    <button onclick="bt_nada()">NADA</button>
+    <button onclick="bt_corre()"> CORRE</button>
+    <button onclick="bt_pedala()">PEDALA</button>
+
+    <div id="div_img"></div>
+    
+</body>
+</html>
+
+<script>
+    function bt_nada() {
+        div_img.innerHTML = '<br><img src="../../imagens/nadando.jpg" ></img>';
+    }
+
+    function bt_corre() {
+        div_img.innerHTML = '<br><img src="../../imagens/correndo.png" ></img>';
+    }
+
+    function bt_pedala() {
+        div_img.innerHTML = '<br><img src="../../imagens/pedalando.jpg"></img>'
+    }
+</script>

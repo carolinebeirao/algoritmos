@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+</head>
+<body>
+    <div>
+    <h2>Meus heróis favoritos são:<span id="span_herois"></span></h2>
+    <h2 id="viloes">Meus vilões favoritos são: <span id="span_viloes"></span></h2>
+    </div>
+
+    <button onclick="bt_herois()" >Ver heróis</button>
+    <button onclick="bt_viloes()" >Ver vilões</button>
+    
+</body>
+</html>
+
+<script>
+    function bt_herois() {
+        span_herois.innerHTML = ' <b>Pai</b>, <i>Carl Sagan</i>';
+
+    }
+    function bt_viloes(){
+        span_viloes.innerHTML = ' <span style=" color:red; "> Lucifer</span>'; 
+    }
+</script>

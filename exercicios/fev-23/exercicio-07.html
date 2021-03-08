@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7</title>
+</head>
+<body>
+
+    <img id="img_sp" onclick="taça_sp()" src="../../imagens/saopaulo.png" alt="foto time são paulo" height="200px" ></img>
+    <img id="img_san" onclick="taça_san()" src="../../imagens/santos.png" alt="foto tima santos" height="200px"></img>
+    <img id="img_cori" onclick="taça_cori()" src="../../imagens/corinthians.png" alt="foto time corinthians" height="200px"></img>
+    <img id="img_palm" onclick="taça_palm()" src="../../imagens/palmeiras.png" alt="foto time palmeiras" height="200px"></img>
+    <img id="taça1" src="../../imagens/taça.png" alt="foto da taça" style="display:none;" height="100px"></img>
+    <img id="taça2" src="../../imagens/taça.png" alt="foto da taça"style="display:none;" height="100px"></img>
+    <img id="taça3" src="../../imagens/taça.png" alt="foto da taça" style="display:none;" height="100px"></img>
+    <img id="semMundial" src="../../imagens/semmundial.png" alt="" style="display:none;" height="200px"></img>
+    <button id="bt_reset" onclick="bt_resetar()" style="display: none;">Resetar Programa</button>
+    
+</body>
+</html>
+
+<script>
+    function taça_sp() {
+        img_palm.style.display = "none";
+        img_san.style.display = "none";
+        img_cori.style.display = "none";
+        taça1.style.display = "inline"
+        taça2.style.display = "inline"
+        taça3.style.display = "inline"
+        bt_reset.style.display = "inline"
+    } 
+
+    function taça_palm() {
+        img_sp.style.display = "none"; 
+        img_san.style.display = "none";
+        img_cori.style.display = "none";
+        semMundial.style.display = "inline"
+        bt_reset.style.display = "inline"       
+    }
+
+    function taça_san() {
+        img_sp.style.display = "none";
+        img_palm.style.display = "none";
+        img_cori.style.display = "none";
+        taça1.style.display = "inline"
+        taça2.style.display = "inline"
+        bt_reset.style.display = "inline"  
+    }
+
+    function taça_cori() {
+        img_sp.style.display = "none";
+        img_palm.style.display = "none";
+        img_san.style.display = "none";
+        taça1.style.display = "inline"
+        taça2.style.display = "inline"
+        bt_reset.style.display = "inline"
+    }
+
+    function bt_resetar() {
+        img_sp.style.display = "inline";
+        img_palm.style.display = "inline";
+        img_san.style.display = "inline";
+        img_cori.style.display = "inline";
+        taça1.style.display = "none"
+        taça2.style.display = "none"
+        taça3.style.display = "none"
+        semMundial.style.display = "none"
+        bt_reset.style.display = "none"
+    }
+</script>

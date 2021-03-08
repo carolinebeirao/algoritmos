@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+</head>
+<body>
+   
+    <button onclick="bt_gol_remo()" >Gol do Remo</button>
+    <button onclick="bt_gol_paysandu()" >Gol do Paysandu</button>
+    <button onclick="bt_escateio_remo()" >Escanteio para o Remo</button>
+    <button onclick="bt_escateio_paysandu()" >Escanteio para o Paysandu</button>
+     <div>
+        <h3>PLACAR DO JOGO </h3>
+        <span id="span_placar"></span>
+    </div>
+</body>
+</html>
+
+<script>
+    function bt_gol_remo() {
+        span_placar.innerHTML += ' <span style="color: navy;"> Goool do <b>leão</b></span><br>';
+    }
+
+    function bt_gol_paysandu() {
+        span_placar.innerHTML += ' <span style="color: cyan;">Goool da <u>Mucura!</u> </span><br>';
+    }
+
+    function bt_escateio_remo() {
+        span_placar.innerHTML += ' Escanteio para o Leão! <br>';
+    }
+
+    function bt_escateio_paysandu() {
+        span_placar.innerHTML += 'Escanteio para o Mucura! <br>';
+    }
+</script>

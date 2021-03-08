@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula17 Cálculos na Página</title>
+</head>
+
+<body>
+    <h2>Minha Calculadora Preferida!!!</h2>
+    Entre com o primeiro número:
+    <input id="pri_num" type="text" placeholder="Primeiro Número"> <br><br>
+    Entre com o segundo número:
+    <input id="seg_num" type="text" placeholder="Segundo Número">
+    <br><br>
+
+    <button onclick="multiplicar()">Multiplicação</button>
+    <button onclick="dividir()">Divisão</button>
+    <button onclick="exponenciar()">Exponenciação</button>
+    <button onclick="raiz()">Radiciação</button>
+    <button onclick="subtrair()">Subtração</button>
+    <button onclick="somar()">Soma</button> <br><br>
+    <div id="div_msg"></div>
+
+</body>
+
+</html>
+<script>
+    function multiplicar() {
+       div_msg.innerHTML = `O Resultado é: ${pri_num.value * seg_num.value}`;
+    }
+    function dividir() {
+        div_msg.innerHTML = `O Resultado é: ${pri_num.value / seg_num.value}`;
+    }
+    function exponenciar() {
+        div_msg.innerHTML = `O Resultado é: ${pri_num.value ** seg_num.value}`;
+    }
+    function raiz() {
+        div_msg.innerHTML = `O Resultado é: ${pri_num.value ** (1/seg_num.value)}`;
+    }
+    function subtrair() {
+        div_msg.innerHTML = `O Resultado é: ${pri_num.value - seg_num.value}`;
+    }
+    function somar() {
+	// Para realizar uma somo com um campo de input temos que usar função Number
+	// com "N" maiúsculo, por exemplo: Number(input_nota1.value)
+
+        div_msg.innerHTML = `O Resultado é: ${Number(pri_num.value) + Number(seg_num.value)}`;
+    }
+
+</script>

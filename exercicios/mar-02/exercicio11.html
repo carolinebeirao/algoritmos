@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11</title>
+</head>
+
+<body>
+    Qual o Ki base do seu guerreiro Sayajin ?
+    <input type="number" id="ki_base">
+    <br><br>
+
+    <br>
+    <button onclick="bt_ssj()">SSJ</button>
+    <button onclick="bt_ssj2()">SSJ2</button>
+    <button onclick="bt_ssj3()">SSJ3</button>
+    <br><br>
+    <div id="div_transf">
+        Transformar em...
+    </div>
+
+
+
+</body>
+
+</html>
+<script>
+    function bt_ssj() {
+        div_transf.innerHTML += ` <br> Após se transformar em SSJ, o ki desse Sayajin passa a ser de ${ki_base.value * 50}`;
+    }
+
+    function bt_ssj2() {
+        div_transf.innerHTML += ` <br> Após se transformar em SSJ2, o ki desse Sayajin passa a ser de ${ki_base.value * 100} `;
+    }
+
+    function bt_ssj3() {
+        div_transf.innerHTML += ` <br> Após se transformar em SSJ3, o ki desse Sayajin passa a ser de  ${ki_base.value * 200} `;
+    }
+
+    // function bt_ssj() {
+
+    // }
+
+</script>

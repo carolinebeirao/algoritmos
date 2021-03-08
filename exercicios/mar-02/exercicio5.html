@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5</title>
+</head>
+
+<body>
+    Qual é o valor da passagem?
+    <br>
+    <input type="number" id="passag" placeholder="Digite o valorl">
+    <br><br>
+    Quantas viagens você faz por mês?
+    <br>
+    <input type="number" id="quant" placeholder="Digita a quantidade">
+    <br><br>
+    <button onclick="bt_calcular()">Calcular VT</button>
+    <br><br>
+    <div id="div_text">
+
+    </div>
+
+
+</body>
+
+</html>
+<script>
+    function bt_calcular() {  
+    div_text.innerHTML = `Você vai gastar <u>R$ ${passag.value * quant.value} </u>  por mês com ônibus`;
+    }
+</script>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10</title>
+</head>
+
+<body>
+   Quantos filhos menores de 10 anos você tem ?
+   <br>
+   <input type="number" id="qtd_menor">
+   <br>
+   <br>
+   Quantos filhos com 10 anos ou mais você tem ?
+   <br>
+   <input type="number" id="qtd_maior">
+   <br>
+   <br>
+   <button onclick="bt_calcular()">Calcular Auxílio Filhos</button>
+   <br><br>
+
+<div id="div_msg">
+
+</div>
+   
+   
+</body>
+
+</html>
+<script>
+    function bt_calcular() {
+        var soma = ((qtd_menor.value * 30) + (qtd_maior.value * 20))
+       div_msg.innerHTML = ` Você tem ${qtd_menor.value} filhos menores de 10 anos e ${qtd_maior.value} filhos a partir de 10 anos, logo, seu "Auxílio Filhos" será de R$ ${soma}`;
+    }
+
+
+
+</script>

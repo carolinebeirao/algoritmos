@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8</title>
+</head>
+
+<body>
+   Informe o seu salário:
+   <input type="number" id="inp_salario">
+   <button onclick="bt_calcular()">Calcular descontos</button>
+   <br>
+
+<div id="div_msg">
+
+</div>
+   
+   
+</body>
+
+</html>
+<script>
+
+    function bt_calcular() {
+        var inss = (inp_salario.value * 0.1);
+        var ir = (inp_salario.value *0.2);
+        var soma = (inss + ir);
+        var total = (inp_salario.value - soma);
+        div_msg.innerHTML = ` Seus descontos serão de:<br>
+    INSS: R$ ${inss}  <br>
+    IR: R$ ${ir}  <br>
+    Total de descontos: R$ ${soma} <br>
+    Seu salário, após os descontos será de: R$ ${total} `;
+    }
+
+</script>

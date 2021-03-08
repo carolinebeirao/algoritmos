@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6</title>
+</head>
+
+<body>
+    Qual é sabor da pizza ?
+    <br>
+    <input type="text" id="sabor" placeholder="Digite o sabor">
+    <br><br>
+    Quanto ela custa ?
+    <br>
+    <input type="number" id="preco" placeholder="Digite o preço">
+    <br><br>
+    Quantos amigos vão comer ?
+    <br>
+    <input type="number" id="amg">
+    <br><br>
+    <button onclick="bt_calcular()">Ver valor por amigo</button>
+
+    <div id="div_frase">
+
+    </div>
+   
+</body>
+
+</html>
+<script>
+    function bt_calcular() {
+        div_frase.innerHTML = `Cada amigo vai colaborar com <U> R$ ${preco.value / amg.value}  </u> para a pizza de ${sabor.value}  `;
+    }
+</script>
