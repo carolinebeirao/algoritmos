@@ -4,16 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>11</title>
+    <title>14</title>
 </head>
 
 <body>
-  
+    Quantos votos o Zé Buduia  teve ?  
+    <input type="number" id="voto_ze" > <br><br>
+    Quantos votos a Maria Bigodenha teve ? 
+    <input type="number" id="voto_maria" > <br><br>
+    Qual foi a quantidade de votos brancos?
+    <input type="number" id="voto_br" > <br><br>
+    Qual foi a quantidade de votos nulos?
+    <input type="number" id="voto_nulo" > <br><br>
+    <button onclick="bt_calcular()" id="" >Resultado da eleição</button><br><br>
+    <div id="div_msg">
 
-
+    </div>
 </body>
 
 </html>
 <script>
+    function bt_calcular() {
+        var ze = voto_ze.value;
+        var ma = voto_maria.value;
+        var invalidos = (Number(voto_br.value) + Number(voto_nulo.value));
+        var total = (Number(ze) + Number(ma) + Number(invalidos));
+        div_msg.innerHTML = `Total de votos: ${total}<br>
+        Zé Ruela:  ${ze} <br>
+        Maria Bigodenha:  ${ma} <br>
+        Inválidos:  ${invalidos}`;
 
+    }
 </script>

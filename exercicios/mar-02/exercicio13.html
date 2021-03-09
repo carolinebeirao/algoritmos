@@ -4,16 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>11</title>
+    <title>13</title>
 </head>
 
 <body>
-  
+    Quantas horas de sono você dormiu ?
+    <input type="number" id="qtd_sono">
+    <button onclick="bt_calcular()" id="bt_calc">calcular sono</button>
+    <div id="div_msg">
+
+    </div>
 
 
 </body>
 
 </html>
 <script>
+    function bt_calcular() {
+        var fase1 = (qtd_sono.value * 0.05);
+        var fase2 = (qtd_sono.value * 0.45);
+        var fase3 = (qtd_sono.value * 0.3);
+        var faseRem = (qtd_sono.value * 0.2);
+        div_msg.innerHTML = `Ao dormir ${qtd_sono.value} horas, você dormiu:<br>
+        ${fase1} horas na fase 1 <br>
+        ${fase2} horas na fase 2 <br>
+        ${fase3} horas na fase 3 <br>
+        ${faseRem} horas na fase REM`; 
+    }
 
 </script>

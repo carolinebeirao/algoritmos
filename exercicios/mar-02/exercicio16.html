@@ -4,16 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>11</title>
+    <title>16</title>
 </head>
 
 <body>
-  
+    Digite o numero da tabuada que você quer visualizar<br><br>
+    <input type="number" id="tabu"> <br><br>
+    <button onclick="bt_tabu()" > Ver Tabuada</button> <br><br>
+    <div id="div_msg">
+
+    </div>
 
 
 </body>
 
 </html>
 <script>
+
+    function bt_tabu() {
+        var x = tabu.value;
+        div_msg.innerHTML = ` ${x} * 1 = ${Number(tabu.value) * 1}<br>
+        ${x} * 2 = ${Number(tabu.value) * 2}<br>
+        ${x} * 3 = ${Number(tabu.value) * 3}<br>
+        ${x} * 4 = ${Number(tabu.value) * 4}<br>
+        ${x} * 5 = ${Number(tabu.value) * 5}<br>
+        ${x} * 6 = ${Number(tabu.value) * 6}<br>
+        ${x} * 7 = ${Number(tabu.value) * 7}<br>
+        ${x} * 8 = ${Number(tabu.value) * 8}<br>
+        ${x} * 9 = ${Number(tabu.value) * 9}<br>
+        ${x} * 10 = ${Number(tabu.value) * 10}<br>`
+    }
 
 </script>

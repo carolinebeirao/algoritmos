@@ -4,16 +4,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>11</title>
+    <title>22</title>
 </head>
 
 <body>
-  
+    <h4>Qual a quantidade em metros de cano para desentupir ?</h4>
+
+    <input type="number" id="mt_desen">
+    <br><br>
+    <button onclick="bt_calcular()">Calcular o Orçamento</button>
+    <br><br>
+    <div id="div_msg">
+
+    </div>
+    <br>
+
+    <h4> lampadas você precisa ?</h4>
+    <input type="number" id="qtd_lamp">
+    <h4>Qual o valor médio da conta de luz atualmente ?</h4>
+    <input type="number" id="valor_ant"><br><br>
+    <button onclick="bt_calcular_eco()">Calcular economia</button><br><br>
+
+    <div id="div_msg2">
+
+    </div>
+
+    <h4>Quantas gramas serão necessarias ?</h4>
+    <input type="number" id="qtd_gram">
+    <bt>
+        <bt>
+            <button onclick="bt_calcular_gram()">Fazer o Orçamento</button>
+
+            <div id="div_msg3">
+
+            </div>
 
 
 </body>
 
 </html>
 <script>
+    function bt_calcular() {
+        var roti = ((Number(mt_desen.value) * 9.8) + 600);
+        var nica = ((Number(mt_desen.value) * 10) + 50);
+        div_msg.innerHTML = `O serviço pela Nicanor sai por R$ ${roti} <br><br>
+        O serviço pela Rotirute sai por R$ ${nica} <br><br>
+        A diferença dos valores é de R$ ${Number(roti) - Number(nica)} <br><br>`;
+    }
+
+    function bt_calcular_eco() {
+        var invest = (Number(qtd_lamp.value) * 20);
+        var eco = parseInt(Number(valor_ant.value) * 0.1);
+        var retor = parseInt(invest / eco);
+        div_msg2.innerHTML = `O seu investimento em lâmpadas será de R$ ${invest} <br>
+        A sua economia na conta de luz será de R$ ${eco} <br> 
+        Portanto, em ${retor} meses o seu investimento será retornado. <br>`;
+    }
+
+    function bt_calcular_gram() {
+        var x = (qtd_gram.value);
+        var esm = (Number(x) * 9.70);
+        var bata = (Number(x) * 8.7);
+        var saoC = (Number(x) * 10.7);
+        div_msg3.innerHTML = `Para ${x} m2 de grama, nosso orçamento é:<br>
+        grama esmeralda = R$ ${esm},  frete = R$ 150,00,  valor total = R$ ${esm + 150} <br>
+        grama batatais = R$ ${bata},  frete = R$ 200,00,  valor total = R$ ${bata + 200} <br>
+        grama São Carlos = R$ ${saoC},  frete = R$ 100,00,  valor total = R$ ${saoC + 100}`;
+
+    }
 
 </script>
