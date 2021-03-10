@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula 15 - Mostrando e escondendo</title>
+</head>
+<body>
+    
+    <h2>Esconde e mostra elementos</h2>
+
+    Há segredos aqui! Cuidado! <br>
+
+    <!--O atributo style="display: none;" faz com que o corpo da tag NÃO seja mostrada na tela 
+        O "display: block;" é o que mostra o corpo da tag na tela
+    -->
+    <button id="but_mostrar" onclick="mostrar_segredo()" style="display: block;">
+        Ver o segredo</button>
+    <button id="but_esconder" onclick="esconder_segredo()" style="display: none;">
+        Esconder o segredo</button>
+
+    <br>
+    <span id="span_segredo" style="display: none;">
+        Você é senhor do que cala e escravo do que fala!
+    </span>
+
+</body>
+</html>
+
+<script>
+
+    /*  Para alterar a propriedade do atributo de uma tag no JS deve-se passar
+        o id da tag, seguido de um ponto, qual o atributo, seguido de um ponto, 
+        qual a propriedade, sinal de igual e o valor desejado entre aspas
+        por exemplo:
+        span_segredo.style.display = 'block';
+            |          |        |       |
+        id da tag      |        |       |   
+                     atributo   |       |
+                           propriedade  |
+                                      valor 
+
+    */
+    function mostrar_segredo() {
+        span_segredo.style.display = "block";
+        but_mostrar.style.display = 'none';
+        but_esconder.style.display = 'block';
+    }
+
+    function esconder_segredo() {      
+        span_segredo.style.display = "none";
+        but_mostrar.style.display = 'block';
+        but_esconder.style.display = 'none';
+    }
+</script>

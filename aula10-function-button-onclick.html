@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 10 - function e onclick</title>
+</head>
+<body>
+    Executar meu programa em JS:
+    <!--
+tag <button> -> desenha um botão simples na tela.
+                seu corpo é o que aparece na 'cara' do botão      
+                atributo 'onclick' indica qual função JS será invocada
+     -->
+    <button onclick="boa_tarde()">Vai!</button>
+    <!-- 
+        O atributo 'onclick' funciona em QUALQUER tag HTML (<b>, <i>, <span>, <img>...)
+    -->
+</body>
+</html>
+
+<script>
+    // este é um comentário de 1 linha
+    
+    /*
+    comentário
+    de 
+    várias linhas
+    */
+
+    /*
+Uma 'function' é uma função, ou seja, um 'programinha' que fica 'guardado' na página
+pronto para uso sempre for necessário.
+
+Após a palavra 'function', temos o nome da função. Regras para o nome da função:
+* NÃO pode começar com número (1,2,3...). Mas pode ter número depois. ex: funcao9()
+* NÃO pode ter espaços em branco. Ao invés, use, por exemplo, underline (_)
+* NÃO pode ter hifen (sinal de menos) no nome
+* Logo após o nome da função DEVE haver um par de parênteses
+* Não é recomendado o uso de caracteres especiais (acentos, cedilhas etc)
+* Recomendação: sempre com letras minúsculas e palavras separadas por underline (_)
+
+Logo após os parênteses da função, abra chaves '{'
+Fechamos as chaves após todas as instruções que queremos que nossa função realize.
+    */
+    function boa_tarde() {
+        alert('Boa tarde, JavaScript!');
+        alert('Meu programa está pronto para uso!');
+    }
+
+</script>
