@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 19 Atalhos Matemáticos</title>
+</head>
+
+<body>
+    
+    <h2>Arredondo números</h2>  
+    Número: <input id="in_numero">
+    <button onclick="arredondar()" >Dividir e Arredondar</button>
+
+    <br>
+    <div id="div_resultado"></div>
+</body>
+
+</html>
+<script>
+    function arredondar() {
+       var numero = Number(in_numero.value);
+       var divisão = numero / 3;
+
+       div_resultado.innerHTML = `Divisão por 3 = ${divisão.toFixed(2)}`;
+    }
+
+</script>

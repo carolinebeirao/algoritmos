@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4</title>
+</head>
+<body>
+
+    Valor da passagem
+    <br>
+    <br>
+    <input type="number" id="valorPassagem">
+    <br>
+    <br>
+    <select id="tipovalor">
+        <option value="">-Selecione o tipo-</option>
+        <option value="1">Inteira</option>
+        <option value="0.5">Meia passagem</option>
+        <option value="0.9"> Cartão Fidelidade</option>
+    </select>
+    <br>
+    <br>
+    <button onclick="bt_calcular()">Calcular passagem</button>
+    <br>
+    <br>
+    <div id="div_msg">
+
+    </div>
+    
+</body>
+</html>
+
+<script>
+    function bt_calcular() {
+        div_msg.innerHTML =  `Você vai pagar R$ ${valorPassagem.value * tipovalor.value} por passagem`;
+    }
+
+</script>

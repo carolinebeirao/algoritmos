@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova substitutiva</title>
+</head>
+<body>
+
+    <div style="float: left;">
+        <img src="https://www.olhonopreco.com.br/media/453-batata-comum-a-granel-kg-md.jpg" alt="batata"  >
+        <br>
+        Quantidade em estoque 
+        <br>
+        <input id="qtdEstoqueBatata" type="number">
+        <br>
+        Valor unitario
+        <br>
+        <input id="valorUniBatata" type="number">
+    </div>
+    <div>
+        <img src="https://www.olhonopreco.com.br/media/100-cenoura-kg-md.jpg" alt="cenoura">
+        <br>
+        Quantidade em estoque 
+        <br>
+        <input id="qtdEstoqueCenoura" type="number">
+        <br>
+        Valor unitario
+        <br>
+        <input id="valorUniCenoura" type="number"  >
+    </div>
+    <br>
+    <br>
+    <button onclick="bt_analiseEstoque()" >Analisar Estoque</button>
+    <br>
+    <br>
+    <div id="div_msg">
+
+    </div>
+
+    
+</body>
+</html>
+
+<script>
+    function bt_analiseEstoque() {
+        var totalLegumes = (Number(qtdEstoqueBatata.value) + Number(qtdEstoqueCenoura.value));
+        var valorEstoqBatata = (Number(qtdEstoqueBatata.value) * Number(valorUniBatata.value));
+        var valorEstoqCenoura = (Number(qtdEstoqueCenoura.value) * Number(valorUniCenoura.value));
+        var somaEstoque = ((Number(qtdEstoqueBatata.value) + Number(qtdEstoqueCenoura.value)) / 200);
+        var heightBata = (( Number(somaEstoque) * Number(qtdEstoqueBatata))/ 100 ); 
+        var heightCeno = (( Number(somaEstoque) * Number(qtdEstoqueCenoura))/ 100);
+        div_msg.innerHTML = `<h3><i><u style="background-color: yellow;">Analise de estoque</u></i></h3>
+        <i>Quantidade total de legumes = <b>${totalLegumes}</b></i>
+        <br>
+        <i style="color: blue;">Valor do estoque de Batatas =  <b> ${valorEstoqBatata} </b></i>
+        <br>
+        <i style="color: red;" > Valor do estoque de Cenouras = <b> ${valorEstoqCenoura} </b></i>
+        <br>
+        <img src="https://www.olhonopreco.com.br/media/453-batata-comum-a-granel-kg-md.jpg" alt="batata"  height="${heightBata}">
+        <img src="https://www.olhonopreco.com.br/media/100-cenoura-kg-md.jpg" alt="cenoura"  height="${heightCeno}">
+        <br>`
+    }
+
+</script>
+
+    somaEstoque = qtdEstoqueBatata + qtdEstoqueCenoura
+    heightBata = 200 * qtdEstoqueBatata / somaEstoque
+    heightCeno = 200 * qtdEstoqueCenoura / somaEstoque
+    
+
+
+

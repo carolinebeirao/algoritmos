@@ -11,9 +11,9 @@
     <img src="https://i.blogs.es/b3a499/il_fullxfull.446392432_hc3v/1366_2000.jpg" width="220px" alt="">
     <h1>Gestoque! Guarde bem o que está contigo!</h1>
     Nome do produto :
-    <input id="nome">
+    <input id="nome" placeholder="Passagem para Marte">
     <br><br>
-    Unidade :
+    Unidade (medida) :
     <input id="unid" placeholder="'unidades', 'quilos', 'litros'">
     <br><br>
     Quantidade em estoque :
@@ -32,7 +32,7 @@
         
     </div>
 
-    <div id="barra" style=" display: inline; margin: 0%; width: 100%;" >
+    <div id="barra" style=" display: inline-block; margin: 0%; width: 100%;" >
     
     </div>
     <b>Composição do preço</b>
@@ -55,19 +55,27 @@
         var valorVenda = venda_unid.value;
         var lucroPorcent = ([(Number(valorVenda) / Number(valorCompra)) - 1 ] * 100);
         var barraTotal =  (Number(valorCompra) + Number(lucroUnidade));
-        var barraGreen = ([(barraTotal / valorCompra) - 1] *100);
-        var barraRed = (barraTotal - lucroUnidade);
+        var barraGreen = ((barraTotal * lucroUnidade / barraTotal));
+        var barraRed = (barraTotal * valorCompra / barraTotal);
+
         div_msg.innerHTML = `Você possui um total de ${estoqueTotal} ${nameMedida} de ${nameProduto} em estoque.
         <br>
         Você tem um total de R$ ${totalVenda} em estoque de ${nameProduto}.
         <br>
         Vai lucrar R$ ${lucroUnidade} em cada ${nameProduto} vendido.
         <br><br>
-        Como comprou cada unidade 
-        por <b style="color:red;">${valorCompra}</b> e vai vender por <b style="color:green;">${valorVenda}</b>, sua margem de lucro será de <b style="color:orange;">${lucroPorcent}%</b>.
+        Como comprou cada unidade por <b style="color:red;">${valorCompra}</b>
+        e vai vender por <b style="color:green;">${valorVenda}</b>, sua margem 
+        de lucro será de <b style="color:orange;">${lucroPorcent}%</b>.
         <br><br>`;
-        barra.innerHTML = `<div style=" background-color: red; width: ${barraRed}%; float:left; "> R$${valorCompra}  </div>
-        <div style=" background-color: green; width: ${barraGreen}; "> R$${lucroUnidade} </div>`;
+        
+        barra.innerHTML = `
+        <div style=" background-color: red; width: ${barraRed}%; float:left; ">
+            R$${valorCompra}  
+        </div> 
+        <div style=" background-color: green; width: ${barraGreen}; "> 
+            R$${lucroUnidade} 
+        </div>`;
         img_calc.src = "https://cdn.dicionariopopular.com/imagens/nazareconfusamatematica.gif";
     }
 </script>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 23</title>
+</head>
+<body>
+    
+    <h2>Pontos cardeais</h2>
+
+    <!-- a tag <select> plota uma "combo box" ou "lista suspensa" na tela -->
+    <!-- a tag <option> é uma opção na <select> -->
+    <!--
+        Para recuperar o valor de uma tag <select>, fazemos exatamente como numa <input>
+        id_da_tag_select.value    
+     -->    
+    <!-- 
+        o CORPO da tag <option> é o que aparece para o usuário
+        o valor do atributo "value" é o valor real do campo da tag <select>
+
+        No "value" pode ter letras, números, palavras etc...
+
+        NÃO COLOCAMOS "id" nas <option> NÃO FAZ SENTIDO!!!
+    -->    
+    <select id="ponto_cardeal">
+        <option value="1">Leste</option>
+        <option value="2">Oeste</option>
+        <option value="3">Norte</option>
+        <option value="4">Sul</option>
+    </select>
+
+
+    <h2>Países</h2>
+
+    <!-- 
+        É possível criar uma "orientação" numa select.
+        Nada mais é que uma option sem valor (ou com valor 0, por exemplo)
+        com um texto de orientação no CORPO da tag, como no exemplo abaixo
+    -->
+    <select id="pais">
+        <option value="">- Selecione um país -</option>
+        <option value="pA">Canadá</option>
+        <option value="pB">Japão</option>
+        <option value="pC">México</option>
+        <option value="pD">Itália</option>
+    </select>
+
+</body>
+</html>
