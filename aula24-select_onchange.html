@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 24 Onchange</title>
+</head>
+<body>
+    
+    <h2>Pontos cardeais</h2>
+
+    <!--O atributo onchange chama a função especificada quando mudamos 
+        o valor (o option selecionado) seja via mouse, seja via teclado
+    -->
+
+    <select id="ponto_cardeal" onchange="mostrar()">
+        <option value="L">Leste</option>
+        <option value="O">Oeste</option>
+        <option value="N">Norte</option>
+        <option value="S">Sul</option>
+    </select>
+
+
+</body>
+</html>
+<script>
+    function mostrar() {
+        alert ("O ponto cardeal é: " + ponto_cardeal.value);
+    }
+</script>

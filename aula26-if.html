@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 26 - if</title>
+</head>
+
+<body>
+
+    <h2>Pontos na CNH</h2>
+
+    <input id="qtde_pontos" placeholder="Digite a quantidade de pontos" />
+    <button onclick="validar()">Validar</button>
+    <br><br>
+    <span id="resposta"></span>
+</body>
+
+</html>
+
+<script>
+    function validar() {
+        var pontos = qtde_pontos.value;
+        var multa = 0;
+
+        // O comando if executa uma comparação, um teste, uma decisão....
+        //
+        // Sua estrutura é:
+        // If (comparação) {comando(s)};
+        //      Os comandos entre as {} SOMENTE serão executados 
+        //      quando a condição  for verdadeira
+        //
+        //    Tipos de comparações:
+        //    >	    Maior que
+        //    <	    Menor que
+        //    >=	Maior ou Igual
+        //    <= 	Menor ou Igual
+        //    ==	Igual
+        //    !=	Diferente
+
+        if (pontos >= 20) {
+            resposta.innerHTML = `Carteira suspensa pois possui ${pontos} pontos<br>`;
+            multa = pontos * 78;
+            resposta.innerHTML += `O valor total das multas é de R$${multa.toFixed(2)}`;
+        }
+
+        if (pontos < 20) {
+            multa = pontos * 78;
+            resposta.innerHTML = `O valor total das multas é de R$${multa.toFixed(2)}`;
+        }
+    }
+
+</script>

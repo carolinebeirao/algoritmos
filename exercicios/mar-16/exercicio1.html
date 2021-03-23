@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+</head>
+<body>
+    <h3>QUEM GUARDA TEM</h3>
+    <input type="number" id="valor">
+    <br><br>
+    <button onclick="tirar()" >retirar do cofrinho</button>
+    <button onclick="depositar()" >Depositar no cofrinho</button>
+    <br><br>
+    <div id="div_msg">
+        O valor que está sendo guardado no seu cofrinho é de R$ <b id="b_total">0</b>
+    </div>
+</body>
+</html>
+
+<script>
+    var total = 0;
+
+    function tirar() {
+        total -= Number(valor.value);
+        b_total.innerHTML = total;
+    }
+
+    function depositar() {
+        total += Number(valor.value);
+        b_total.innerHTML = total;
+    }
+</script>

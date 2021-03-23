@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+</head>
+<body>
+    <h3>QUAL O SEU NOME</h3>
+    <input  id="nome">
+    <h3>QUAL A SUA IDADE?</h3>
+    <input type="number" id="idade">
+    <br><br>
+    <button onclick="bt_avaliar()" >Avaliar Aluno</button>
+    <br><br>
+    <div id="div_msg">
+        
+    </div>
+</body>
+</html>
+
+<script>
+
+    function bt_avaliar() {
+       if( idade.value >= 18) {
+           div_msg.innerHTML = `${nome.value} vamos tirar a CNH?`;
+       }
+       else{
+           div_msg.innerHTML = `${nome.value} vai jogar PlayStation!!!`;
+       }
+    }
+
+  
+</script>

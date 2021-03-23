@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+</head>
+<body>
+
+    <select id="times" onchange="bt_escudo()" >
+        <option value="">-Selecione um time-</option>
+        <option value="https://i.pinimg.com/736x/d3/ea/e4/d3eae45dbc72483a7f155a295a68a554.jpg">São Paulo</option>
+        <option value="https://www.palmeiras.com.br/wp-content/uploads/2019/08/bandeira.jpg">Palmeiras</option>
+        <option value="https://s2.glbimg.com/1U1Gqk5OWwPsV4qSoPodOvKwBVQ=/0x0:589x590/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2019/9/J/JE2YdaSwWWkHYyvDhSIw/escudosantos02.jpg"">Santos</option>
+        <option value="https://i.pinimg.com/236x/0c/37/d7/0c37d781ffce3c63806dd6fe4978745d.jpg">Corinthians</option>
+    </select>
+
+    <!-- <button onclick="bt_escudo()" > Ver escudo </button> -->
+    <br>
+    <div id="div_msg">
+
+    </div>
+    
+</body>
+</html>
+
+<script>
+    function bt_escudo() {
+        div_msg.innerHTML +=  `<img style= width:200px; src="${times.value}">`;
+    }
+
+</script>

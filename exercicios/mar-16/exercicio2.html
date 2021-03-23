@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+</head>
+<body>
+   <h3>Quantas latinhas você toma por dia ?</h3>
+   <br>
+   <input id="latas" type="number">
+   <br>
+   <br>
+   <button onclick="bt_qtdAno()" >Quantos refris?</button>
+   <div id="div_msg">
+
+   </div>
+</body>
+</html>
+
+<script>
+   
+    function bt_qtdAno() {    
+        var total = latas.value * 365;
+        div_msg.innerHTML = `Anualente você consome ${total} latas`;
+
+        if (total > 500) 
+        div_msg.innerHTML += ' <br> Cuidado com a diabéte!';
+        
+    }
+</script>

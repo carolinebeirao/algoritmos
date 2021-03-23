@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5</title>
+</head>
+<body>
+   <h3>Qual o valor da renda familiar ?</h3>
+   <input id="valorRenda" type="number">
+   <br>
+   <br>
+   <h3>Qual o valor da prestação ?</h3>
+   <input id="valorPresta" type="number">
+   <br>
+   <br>
+   <button onclick="bt_financiamento()" >Verificar financiamento</button>
+   <br>
+   <br>
+   <div id="div_msg">
+
+   </div>
+
+
+ 
+</body>
+</html>
+
+<script>
+    function bt_financiamento() {
+        var total = ((valorPresta.value / valorRenda.value) * 100)
+        div_msg.innerHTML = `a prestação corresponde a ${total}% da renda familiar" `;
+
+         if(total > 3.0)
+        div_msg.innerHTML += `<br> Será necessário complementar a renda`;
+    }
+    
+</script>
