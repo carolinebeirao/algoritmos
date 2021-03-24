@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7</title>
+</head>
+<body>
+    <h3>Qual a frequencia do aluno ?</h3>
+    <input id="freq" type="number">
+    <br>
+    <button onclick="bt_analisar()" >Analisar frequencia</button>
+    <br>
+    <br>
+    <img id="div_msg" src="" >
+    
+
+ 
+</body>
+</html>
+
+<script>
+    function bt_analisar() {
+        if(freq.value < 50) {
+            div_msg.src = "https://images.freeimages.com/images/premium/previews/2505/25057705-happy-tourist.jpg";
+        }
+        if(freq.value > 50) {
+            div_msg.src = "https://st2.depositphotos.com/2379655/7898/i/600/depositphotos_78986424-stock-photo-curious-school-student-reading-a.jpg";
+        }
+    } 
+</script>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 08</title>
+</head>
+<body>
+    
+    <h2>Elevador Lokão</h2>
+
+    <input placeholder="Quantos homens" id="in_homens">
+    <br>
+    <input placeholder="Quantas mulheres" id="in_mulheres">
+    <br><br>
+    
+    <button onclick="analisar()">Analisar peso</button>
+
+    <div id="div_resultado"></div>
+
+</body>
+</html>
+<script>
+    function analisar() {
+        var homens = Number(in_homens.value);
+        var mulheres = Number(in_mulheres.value);
+
+        var peso = homens * 80 + mulheres * 60;
+
+        div_resultado.innerHTML = `Este elevador suporta 800 Kg e o peso estimado desta lotação é de ${peso}kg`;
+
+        if (peso > 800) {
+            var inicio_frase = '<span style="color:blue">';
+
+            if (peso >= 1000) {
+                inicio_frase = '<span style="color:red">';
+            }
+
+            div_resultado.innerHTML += `<br>${inicio_frase}Será necessário descer alguém para que o elevador se movimente</span>`;
+        }
+        
+    }
+</script>

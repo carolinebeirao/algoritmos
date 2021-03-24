@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+</head>
+<body>
+    <h3>Qual é o saldo atual da conta?</h3>
+    <input  id="saldo" type="number">
+    <h3>Qual o valor do debito ?</h3>
+    <input type="number" id="debito">
+    <br><br>
+    <button onclick="bt_analisar()" >Analisar conta</button>
+    <br><br>
+    <div id="div_msg">
+        
+    </div>
+</body>
+</html>
+
+<script>
+
+    function bt_analisar() {
+      var total = (Number(saldo.value) - Number(debito.value));
+      if( total < 0 ) {
+          div_msg.innerHTML = `<b style="color:red;"> O saldo atual da conta corrente é R$${total} </b>`;
+      }
+      else if( total >= 0){
+        div_msg.innerHTML = `<i style="color:blue;"> O saldo atual da conta corrente é R$${total} </i>`;
+      }
+    }
+
+  
+</script>

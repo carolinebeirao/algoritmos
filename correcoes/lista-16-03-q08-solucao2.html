@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 08 - Solução 2</title>
+</head>
+<body>
+    
+    <h2>Elevador Lokão</h2>
+
+    <input placeholder="Quantos homens" id="in_homens">
+    <br>
+    <input placeholder="Quantas mulheres" id="in_mulheres">
+    <br><br>
+    
+    <button onclick="analisar()">Analisar peso</button>
+
+    <div id="div_resultado1"></div>
+    <div id="div_resultado2"></div>
+
+</body>
+</html>
+<script>
+    function analisar() {
+        var homens = Number(in_homens.value);
+        var mulheres = Number(in_mulheres.value);
+
+        var peso = homens * 80 + mulheres * 60;
+
+        div_resultado1.innerHTML = `Este elevador suporta 800 Kg e o peso estimado desta lotação é de ${peso}kg`;
+
+        div_resultado2.innerHTML = '';
+
+        if (peso > 800) {
+
+            div_resultado2.innerHTML = 'Será necessário descer alguém para que o elevador se movimente';
+
+            var cor = 'blue';
+
+            if (peso >= 1000) {
+                cor = 'red';
+            }
+
+            div_resultado2.style.color = cor;
+            
+        }
+        
+    }
+</script>

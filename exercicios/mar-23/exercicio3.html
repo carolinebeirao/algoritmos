@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+</head>
+<body>
+    <h3>Quantidade de chocolates</h3>
+    <input  id="qtd_choco" type="number">
+    <br><br>
+    <button onclick="bt_compra()" >Comprar</button>
+    <br><br>
+    <div id="div_msg">
+        
+    </div>
+</body>
+</html>
+
+<script>
+
+    function bt_compra() {
+      if( qtd_choco.value > 12){
+        div_msg.innerHTML = `o valor da sua compra foi de R$ ${qtd_choco.value * 2.50}`;
+      }
+      else {
+        div_msg.innerHTML = `o valor da sua compra foi de R$ ${qtd_choco.value * 3.00}`;
+      }
+    }
+
+  
+</script>

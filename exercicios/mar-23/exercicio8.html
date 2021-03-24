@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8</title>
+</head>
+<body>
+    <h3>Insira a temperatura do local ?</h3>
+    <input id="temp" type="number">
+    <br>
+    <button onclick="bt_analisar()" >Verificar clima</button>
+    <br>
+    <br>
+    <img id="div_msg" src="" >
+    
+
+ 
+</body>
+</html>
+
+<script>
+    function bt_analisar() {
+        if(temp.value < 10) {
+            div_msg.src = "https://www.soninha.com.br/camara/wp-content/uploads/2019/09/fruta-fresca-1200-1068x712.jpg";
+        }
+        else {
+            div_msg.src = "https://www.clickgratis.com.br/blog-clickgratis/wp-content/uploads/2016/03/allimentos-estragados.jpg";
+        }
+    } 
+</script>
