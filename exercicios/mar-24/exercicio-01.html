@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+</head>
+<body>
+    <h4>Digite a média</h4>
+    <input type="number" id="id_media" placeholder="Média">
+    <br>
+    <br>
+    <h4>Digite a frequência</h4>
+    <input type="number" id="id_freq" placeholder="Frequência">
+    <br>
+    <br>
+    <button onclick="bt_avaliar()" >Avaliar</button>
+    <br>
+    <br>
+    <div id="div_msg">
+
+    </div>
+    
+</body>
+</html>
+<script>
+    function bt_avaliar(){
+        if(id_media.value < 8)
+        div_msg.innerHTML = `Você poderia estudar mais!`;
+        else if (id_media.value >= 8)
+        div_msg.innerHTML = `Você estuda muito!`;
+
+        if (id_freq.value < 60)
+        div_msg2.innerHTML = `<br> você falta muito!`;
+        else if (id_freq.value >= 60)
+        div_msg2.innerHTML = `<br> você falta pouco!`;
+        
+    }
+
+</script>

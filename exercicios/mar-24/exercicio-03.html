@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+</head>
+
+<body>
+    <h4>Digite a temperatura</h4>
+    <input type="number" id="id_temp" placeholder="Média">
+    <br>
+    <br>
+    <button onclick="bt_analisar()" >Analisar clima</button>
+    <br>
+    <br>
+    <div id="div_msg">
+
+    </div>
+    
+</body>
+
+</html>
+<script>
+    function bt_analisar() {
+        if (id_temp.value <= 21.5) {
+            div_msg.innerHTML = `<span style="color:blue;">FRIO!!!!</span>`;
+        } else {
+            div_msg.innerHTML = `<span style="color:red;"> QUENTEEEE!!!</span>`;
+        }
+
+    }
+
+
+</script>

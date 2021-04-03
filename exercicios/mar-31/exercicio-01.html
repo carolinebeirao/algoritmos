@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+</head>
+<body>
+    Qual é a temperatura?
+    <input id="temp" type="number">
+    <br>
+    <br>
+    <button onclick="bt_analisar()" >Analisar</button>
+    <br>
+    <br>
+    <div id="div_msg">
+
+    </div>
+</body>
+</html>
+<script>
+    function bt_analisar() {
+        if(temp.value < 22 || temp.value > 25)
+        div_msg.inneHTML = "Temperatura desconfortavel";
+        else 
+        div_msg.inneHTML = "Confortavel";
+        
+    }
+</script>
+
+<!-- Solicite a temperatura
+
+b) Ao clicar em "Analisar", exiba na própria página uma dessas frases:
+
+"Temperatura desconfortável", caso ela for menor que 22 ou maior que 25
+
+"Temperatura confortável", caso contrário -->
