@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 33 - Boolean</title>
+</head>
+
+<body>
+    Entre com a média <input id="ipt_media"> <br>
+    Entre com a frequência <input id="ipt_freq">
+    <br><br>
+    <button onclick="analisar()">Analisar</button>
+
+</body>
+
+</html>
+<script>
+    function analisar() {
+
+     //               VARIÁVEIS BOOLEANAS 
+    // As variáveis Booleanas só comportam true ou false
+    // Elas são geradas com o resultado de uma condição 
+    //      e sempre devolverão o true ou false da condição que as originou
+
+        // var ax_aprovado = ipt_media.value >= 6 && ipt_freq.value >= 75;
+        // if (ax_aprovado) {
+        //     alert ('aluno aprovado')
+        // } else {
+        //     alert ('aluno reprovado')
+        // }
+        var ax_mediaOK = ipt_media.value >= 6;
+        var ax_freqOK = ipt_freq.value >= 75;
+        if (ax_mediaOK && ax_freqOK) { 
+            alert ('aluno aprovado')
+        } else {
+            alert ('aluno reprovado')
+        }
+    }
+
+</script>

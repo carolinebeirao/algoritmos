@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+</head>
+<body>
+    Altura:
+    <input type="number" id="x_altura"> <br><br>
+    <button onclick="analisar()">Analisar</button> <br><br>
+    <div id="msg">
+
+    </div>
+</body>
+</html>
+<script>
+    function analisar(){
+        var altura = x_altura.value;
+        var baixo = altura < 160;
+        var medio = altura >= 160 && altura <= 185;
+        var alto = altura > 185;
+        if(baixo){
+            msg.innerHTML = `Pode tentar ser piloto(a) de corrida <br>`;
+            msg.innerHTML += `Pode tentar ser velejador(a)`;
+        } else if(medio){
+            msg.innerHTML = `Pode tentar ser jogador de futebol ou handebol`;
+        } else if (alto){
+            msg.innerHTML = `Pode tentar ser jogador de voleibol <br>`;
+            msg.innerHTML += `Pode tentar ser jogador de basquete`;
+    }
+}
+</script>
+
+<!-- //  2.  Crie um programa em HTML/JS o qual:
+
+// a) Solicite a altura do usuário
+
+// b) Ao clicar em "Analisar para esportes", exiba, abaixo do botão, uma ou mais dessas frases (uma abaixo da outra caso apareçam mais de uma):
+
+//    "Pode tentar ser piloto(a) de corrida", caso sua altura for menor que 1,60
+//    "Pode tentar ser velejador(a)", caso sua altura for menor que 1,60
+//    "Pode tentar ser jogador de futebol ou handebol", caso sua altura for mais que 1,60 e até 1,85
+
+//    "Pode tentar ser jogador de voleibol", caso sua altura for maior que 1,85
+
+//    "Pode tentar ser jogador de basquete", caso sua altura for maior que 1,85  -->

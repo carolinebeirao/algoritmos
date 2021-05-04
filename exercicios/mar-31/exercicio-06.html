@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5</title>
+</head>
+
+<body>
+    Qual o tipo de arroz?<br>
+    <select id="tipo">
+        <option value="">Selecione uma opção</option>
+        <option value="1">branco</option>
+        <option value="2">integral</option>
+    </select>
+    <br>
+    Qual o tempo de cozimento?
+    <input type="number"  id="tempo" placeholder="em minutos"> <br>
+    <button onclick="bt_ver()" >Deu match?</button>
+    <img src="" id="img_id" alt="">
+</body>
+
+</html>
+<script>
+    function bt_ver() {
+        if (altura.value >= 170 && cabelo.value == 1 || cabelo.value == 2 ) {
+            img_id.src = "https://image.freepik.com/fotos-gratis/homem-empolgado-aperta-os-punhos-e-grita-alto-expressa-sua-raiva-vestido-com-uma-camiseta-verde-encostado-na-parede-rosa_273609-17188.jpg";
+        } else {
+            img_id.src = "https://image.freepik.com/fotos-gratis/homem-triste-segurando-a-cabeca-com-a-mao_1150-6345.jpg";
+        }
+
+    }
+
+</script>
+
+<!--  Crie um programa em HTML/JS o qual:
+OBS: Use, necessariamente pelo menos um "ou" (||)
+a) Pergunte numa combo o tipo de arroz usado (integral ou branco)
+b) Pergunte o tempo de cozimento, em minutos
+c) Pergunte a quantidade de sal usada, em gramas
+d) Ao clicar em "Avaliar arroz", exiba, abaixo dele...
+    A frase "Arroz perfeito", caso:
+      Em caso de arroz branco, 10 minutos e até 10g de sal
+      Em caso de arroz integral, 20 minutos e até 15g de sal
+   A frase "Seu arroz não está perfeito", caso nenhum dos critérios anteriores tenha sido alcançado
+e) No caso de arroz perfeito, exiba também a imagem de um belo arroz, branco ou integral, conforme
+ o tipo selecionado. Caso contrário, exiba a cara do Jacquin bravo (aquele famoso meme), independe do tipo de arroz.
+ -->

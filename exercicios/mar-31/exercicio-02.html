@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+</head>
+<body>
+    Qual é a forma de pagamento?
+    <select id="combo">
+        <option value="">- selecione uma opção</option>
+        <option value="1">Dinheiro</option>
+        <option value="2">Cartão de débito</option>
+        <option value="3">Cartão de crédito</option>
+        <option value="4">Boleto</option>
+    </select>
+    <br>
+    <br>
+    <button onclick="bt_analisar()" >Analisar</button>
+    <br>
+    <br>
+    <div id="div_msg">
+
+    </div>
+</body>
+</html>
+<script>
+    function bt_analisar() {
+        if(combo.value == "1" || combo.value == "2" ){
+            alert ('Você terá que pagar a vista');
+        } else {
+          alert ('Pagamento poderá ser parcelado');
+        }         
+    }
+</script>
+
+<!-- a) Pergunte o modo de pagamento numa combo com as seguintes opções:
+    Dinheiro
+    Cartão de débito
+    Cartão de crédito
+    Boleto
+b) Ao clicar num botão "Analisar compra", exiba um alert com uma dessa mensagens:
+   "Você terá que pagar a vista", somente se o pagamento for dinheiro ou débito
+   "Pagamento poderá ser parcelado", se o pagamento for crédito ou boleto -->

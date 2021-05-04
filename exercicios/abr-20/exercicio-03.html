@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+</head>
+
+<body>
+    Nota:
+    <input type="number" id="x_nota"> <br><br>
+    Frequencia:
+    <input type="number" id="x_freq"> <br><br>
+
+    <button onclick="analisar()"> Analisar</button>
+    <br><br>
+    <div id="msg">
+
+    </div>
+
+</body>
+
+</html>
+<script>
+    function analisar() {
+        var nota = Number(x_nota.value);
+        var freq = Number(x_freq.value);
+        var aprov = nota >= 6 && freq >= 75;
+        var repNota = nota < 6 && freq < 75;
+        var repFreq = freq < 75;
+        if (aprov) {
+            msg.innerHTML = `Parabéns, aprovado(a)!`;
+        } else if (repNota) {
+            msg.innerHTML = `Reprovado(a) por nota! <br>`;
+            msg.innerHTML += `Reprovado(a) por frequência!`;
+        } else if (nota < 6) {
+            msg.innerHTML = `Reprovado(a) por nota!`;
+        } else if (freq < 75) {
+            msg.innerHTML = `Reprovado(a) por frequência!`;
+
+        }
+    }
+</script>
+
+<!-- // 3. Crie um programa em HTML/JS o qual:
+
+// a) Solicite a nota e a frequência do aluno
+
+// b) Ao clicar em "Avaliar", exiba algumas dessas frases abaixo do botão (pode ser que mais de uma delas apareça. Nesse caso, mostre uma abaixo da outra):
+
+//    "Parabéns, aprovado(a)!" caso sua nota for a partir de 6 e sua frequência a partir de 75
+//    "Reprovado(a) por nota!" caso sua nota for menor que 6
+//    "Reprovado(a) por frequência!" caso sua frequência for menor que 75 -->

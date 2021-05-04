@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5</title>
+</head>
+
+<body>
+    tempo de trabalho em anos para o pai
+    <input id="temp_trab" type="number">
+    <br>
+    Quantidade em Kg de trigo rendido
+    <input id="kg_trigo" type="number">
+    <br>
+    Quantidade de dias que faltou por estar doente 
+    <input id="faltas" type="number">
+    <button onclick="bt_verificar()" > Deu match?</button>
+    <div id="div_msg">
+
+    </div>
+    <img id="foto" src="" alt="">
+</body>
+
+</html>
+<script>
+    function bt_verificar() {
+        if (temp_trab.value >= 5 && kg_trigo.value >= 300 && faltas.value <= 5){
+           div_msg.innerHTML = 'Minha filha será sua';
+           foto.src = "https://a-static.mlcdn.com.br/600x600/boneca-one-piece-boa-hancock-noiva-23cm-wedding-banpresto/japacolecionaveis/7677p/9e74307186e8577735d7535844bb1205.jpg";
+        } else {
+            div_msg.innerHTML = 'DEU RUIM!!! Trabalhe mais dois anos';
+            foto.src = "http://www.escoladosucesso.com/plataforma/img/blog/top22.jpg";
+        }
+    }
+</script>

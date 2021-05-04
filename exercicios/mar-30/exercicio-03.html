@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+</head>
+<body>
+    <input id="temp" type="number" placeholder="Digite a temperatura">
+    <br>
+    <button onclick="bt_verificar()" >Medir conforto</button>
+    <div id="div_msg">
+
+    </div>
+</body>
+</html>
+<script>
+    function bt_verificar() {
+        if (temp.value >= 22 && temp.value <= 23){
+          alert ('TEMPERATURA CONFORTAVEL' );  
+        } else {
+            alert ('TEMPERATURA NÃO ESTÁ CONFORTAVEL');
+        }
+        
+    }
+</script>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5</title>
+</head>
+
+<body>
+    Insira o nome da empresa <br>
+    <input id="nome" type="text"><br>
+    Qual o valor da bolsa da empresa <br>
+    <input id="bolsa" type="number"> <br>
+    Qual o valor do VR da empresa <br>
+    <input id="vr" type="number"><br>
+    Qual o tempo de descolamento da empresa para a Bandtec <br>
+    <input id="tempo" type="number" placeholder="minutos"><br>
+    <br>
+    <button onclick="bt_ver()">É preferida?</button>
+    <br>
+    <br>
+    <div id="div_msg">
+
+    </div>
+</body>
+
+</html>
+<script>
+    function bt_ver() {
+        if (bolsa.value >= 1800 || vr.value >= 20 || tempo.value <= 30) {
+            div_msg.innerHTML = (`A empresa ${nome.value} é uma de suas preferências`);
+        } else {
+            div_msg.innerHTML = (`A empresa ${nome.value} está fora da sua lista`);
+        }
+        
+    }
+</script>
+
+<!-- 5. Augusto Bivio é aluno Bandtec e bolou um critério para indicar em
+      quais empresa teria preferência em ir trabalhar. Seus critérios são:
+       A bolsa deve ser pelo menos 1800 ou o VR pelo menos 20 ou deve ficar 
+       a no máximo 30 minutos de tempo de deslocamento da faculdade. Se um 
+       desses 3 critérios for ok, a empresa está entre suas preferências.
+        Assim, crie um programa em HTML/JS o qual:
+a) Solicite o nome da empresa
+b) Solicite o valor da bolsa da empresa
+c) Solicite o valor do VR da empresa
+d) Solicite o tempo de descolamento da empresa para a Bandtec
+e) Ao clicar em "É preferida?", mostre uma dessas mensagens na própria página, abaixo do botão:
+   "A empresa X é uma de suas preferências", caso a empresa atenda aos critérios aqui explicados
+   "A empresa X está fora da sua lista", caso contrário -->

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5</title>
+</head>
+<body>
+    Digite  o seu nome :
+    <input id="id_nome" type="text" onkeyup="verificar()">
+    <div id="div_msg">
+
+    </div>
+</body>
+</html>
+<script>
+    
+    function verificar(){
+        var nome = id_nome.value;
+        nome = nome.trim();
+        fog = nome.indexOf('fogo')
+        div_msg.innerHTML = ``;
+        if( nome.length >= 10 && fog == -1){
+            div_msg.innerHTML = `Nome OK  ${nome.length}`;
+        } else if (fog >= 0){
+            div_msg.innerHTML = `com fogo não se brinca ${nome.length}`;
+        } else {
+            div_msg.innerHTML = `é necessario inserir pelo menos 10 caracteres ${nome.length}`;
+        }
+    }
+</script>
+
+<!-- só é válido se tiver pelo menos 10 letras. Em caso de nome válido,
+ exiba na página "Nome OK". Caso contrário, exiba "Nome deve ter pelo menos 10 letras" -->

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+</head>
+<body>
+    <input id="nota1" type="number" placeholder="Digite a primeira nota">
+    <br>
+    <input id="nota2" type="number" placeholder="Digite a segunda nota">
+    <br>
+    <input id="freq" type="number" placeholder="Digite a frequência">
+    <button onclick="bt_verificar()" >Verificar </button>
+    <div id="div_msg">
+
+    </div>
+</body>
+</html>
+<script>
+    
+    function bt_verificar() {
+        var media = (Number(nota1.value) + Number(nota2.value)) / 2 ;
+        if ( nota1.value >= 5 && nota2.value >= 5 && media > 5 && freq.value > 74 ){
+            alert ('ALUNO APROVADO') 
+        } else {
+            alert ('ALUNO REPROVADO') 
+        }
+    }
+        
+    
+</script>

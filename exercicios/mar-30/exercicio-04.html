@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4</title>
+</head>
+
+<body>
+    Café da manha
+    <select id="combo_cafe">
+        <option value="">-selecione uma opção-</option>
+        <option value="1"> Ovos</option>
+        <option value="2"> Leite de arroz</option>
+        <option value="3"> Bacon </option>
+    </select>
+    <br>
+    Almoço
+    <select id="combo_almoco">
+        <option value="">-selecione uma opção-</option>
+        <option value="1"> Bife</option>
+        <option value="2"> Hamburguer de soja</option>
+        <option value="3"> Frango grelhado </option>
+    </select>
+    <br>
+    Janta
+    <select id="combo_janta">
+        <option value="">-selecione uma opção-</option>
+        <option value="1"> Picanha de soja</option>
+        <option value="2"> Cupim</option>
+        <option value="3"> Coração </option>
+    </select>
+    <button onclick="bt_verificar()" > Sou vegano?</button>
+    <div id="div_msg">
+
+    </div>
+</body>
+
+</html>
+<script>
+    function bt_verificar() {
+        if (combo_cafe.value == 2 && combo_almoco.value == 2 && combo_janta.value == 1){
+            alert ('Sim, você é vegano');
+        } else {
+            alert('Não, você NÃO é vegano!');
+        }
+    }
+</script>

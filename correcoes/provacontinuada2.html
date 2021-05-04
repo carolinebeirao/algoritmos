@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA</title>
+</head>
+
+<body>
+    Valor total da primação:
+    <input id="prem_total" type="number">
+    <br><br>
+    Numero maximo de rodadas:
+    <input id="rodad_max" type="number">
+    <br><br>
+    Resultado time A:
+    <select id="comboA">
+        <option value="">selecione</option>
+        <option value="3">vitória</option>
+        <option value="1">empate</option>
+        <option value="0">derrota</option>
+    </select>
+    Resultado time B:
+    <select id="comboB">
+        <option value="">selecione</option>
+        <option value="3">vitória</option>
+        <option value="1">empate</option>
+        <option value="0">derrota</option>
+    </select>
+    Resultado time C:
+    <select id="comboC">
+        <option value="">selecione</option>
+        <option value="3">vitória</option>
+        <option value="1">empate</option>
+        <option value="0">derrota</option>
+    </select>
+    <br><br>
+    <button onclick="bt_realizar()">REALIZAR RODADA</button>
+    <button onclick="bt_premio()">REVELAR PREMIAÇÃO</button>
+    <div id="div_msg">
+
+    </div>
+    <div id="div_venc">
+
+    </div>
+    <div id="resultA">
+
+    </div>
+    <div id="resultB">
+
+    </div>
+    <div id="resultC">
+
+    </div>
+
+
+</body>
+
+</html>
+<script>
+    cont = 0;
+    var ptsA = 0;
+    var ptsB = 0;
+    var ptsC = 0;
+
+    function bt_realizar() {
+        cont++;
+        var premio = prem_total.value;
+        var rodadas = rodad_max.value;
+        ptsA = Number(ptsA) + Number(comboA.value);
+        ptsB = Number(ptsB) + Number(comboB.value);
+        ptsC = Number(ptsC) + Number(comboC.value);
+
+        if (premio >= 1000 && rodadas >= 1) {
+            div_msg.innerHTML = `Rodada atual :${cont}`;
+            resultA.innerHTML = ` Time A ${ptsA}`;
+            resultB.innerHTML = ` Time B ${ptsB}`;
+            resultC.innerHTML = `Time C ${ptsC}`;
+        } else {
+            alert('Dados inválidos para a rodada');
+        }
+    }
+    function bt_premio() {
+        var porcTotal = Number(ptsA) + Number(ptsB) + Number(ptsC);
+        var premio = prem_total.value;
+        var porcA = (ptsA / porcTotal) * premio;
+        var porcB = (ptsB / porcTotal) * premio;
+        var porcC = (ptsC / porcTotal) * premio;
+        if (ptsA > ptsB && ptsA > ptsB) {
+            div_venc.innerHTML = `o vencedor é o TIME A que recebera ${porcA.toFixed(2)} do total de r$${premio}`;
+        } else if (ptsB > ptsA && ptsB > ptsC) {
+            div_venc.innerHTML = `o vencedor é o TIME B que recebera   ${porcB.toFixed(2)} do total de r$${premio}`;
+        } else if (ptsC > ptsA && ptsC > ptsB) {
+            div_venc.innerHTML = `o vencedor é o TIME C que recebera   ${porcC.toFixed(2)} do total de r$${premio}`;
+        }
+    }
+</script>

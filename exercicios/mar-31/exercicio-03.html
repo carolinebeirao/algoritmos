@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+</head>
+<body>
+    Você tem no banco: <span id="id_msg"> 0.00 </span>
+    <br>
+    <button onclick="bt_mais50()" >Depositar 50</button>
+    <button onclick="bt_menos20()" >Sacar 20</button>
+    <br>
+    <br>
+    <div id="div_msg">
+
+    </div>
+</body>
+</html>
+<script>
+    var valor = 0.00;
+    function bt_mais50() {
+        valor += 50;
+        id_msg.innerHTML = `${valor}`; 
+        if(valor < 0 || valor > 600){
+            div_msg.innerHTML = "Você gasta demais ou é mão de vaca!";
+        }  else {
+            div_msg.innerHTML = "Você tem as finanças equilibradas";
+        }     
+    }
+    function bt_menos20() {
+        valor -= 20;
+        id_msg.innerHTML = `${valor}`;
+        if(valor < 0 || valor > 600){
+            div_msg.innerHTML = "Você gasta demais ou é mão de vaca!";
+        }  else {
+            div_msg.innerHTML = "Você tem as finanças equilibradas";
+        }     
+    }
+</script>
+
+<!-- a) Tenha na página, logo de cara, um texto assim:
+"Você tem no banco: R$0.00" (assim mesmo, com 0.00)
+b) Tenha um botão "Depositar 50". Ao ser clicado ele faz aumentar o valor no banco em 50. Claro, atualize isso na tela.
+c) Tenha um botão "Sacar 20". Ao ser clicado ele faz reduzir o valor no banco em 20. Claro, atualize isso na tela.
+d) Independentemente do botão clicado, abaixo do valor no banco deve aparacer sempre uma dessas frases:
+"Você gasta demais ou é mão de vaca!" caso o valor no banco for negativo (abaixo de 0) ou acima de 600.
+"Você tem as finanças equilibradas" caso o valor no banco for entre 0 e 600. -->

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+</head>
+
+<body>
+    Digite o seu numero favorito entre 1 e 10:
+    <input id="id_num" type="number">
+    <button onclick="bt_validar()">SORTEAR NOTA ALUNO</button>
+    <div id="div_msg">
+
+    </div>
+</body>
+
+</html>
+<script>
+    var cont = 0;
+    function bt_validar() {
+        var num = id_num.value;
+        var sort = Math.random();
+        cont++;
+        if (num >= 1 && num <= 10) {
+            div_msg.innerHTML = `${(sort * 11).toFixed(0)} <br> Sorteios realizados: ${cont}`;
+
+        } else {
+            alert('Digite um numero valido entre 1 e 10');
+        }
+
+    }
+</script>

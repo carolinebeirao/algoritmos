@@ -39,47 +39,26 @@
 
     function bt_analisar() {
         var media = (id_renda.value / combo.value);
-        if (media <= 2166 ) {
+        if (media <= 2166) {
             div_msg.innerHTML = `<span style="color:red;">CLASSE D ou E`;
             div_msg.innerHTML += `<br> A renda média de cada adulto é R$${media}`;
-            id_img.src = "";  
+            id_img.src = "";
         } else if (media <= 5223) {
             div_msg.innerHTML = `<span style="color:blue;">CLASSE C </span>`;
             div_msg.innerHTML += `<br> A renda média de cada adulto é R$${media}`;
-            id_img.src = "";  
+            id_img.src = "";
 
         } else if (media <= 16263) {
             div_msg.innerHTML = `<span style="color:grey;"> CLASSE B </span>`;
             div_msg.innerHTML += `A renda média de cada adulto é R$${media}`;
             id_img.src = "https://media0.giphy.com/media/bwLI2JHYHpD4c3UosX/giphy.gif";
-        } else if(media > 16263) {
+        } else if (media > 16263) {
             div_msg.innerHTML = `<span style="color:green;"> CLASSE A </span>`;
             div_msg.innerHTML += `<br> A renda média de cada adulto é R$ ${media}`;
-            id_img.src = "https://media0.giphy.com/media/bwLI2JHYHpD4c3UosX/giphy.gif";  
+            id_img.src = "https://media0.giphy.com/media/bwLI2JHYHpD4c3UosX/giphy.gif";
         }
-        
+
     }
 
 
 </script>
-
-<!-- x <= 2.166 CLASSE D OU E 
-  <= 5.223 CLASSE C
-  <= 16.263 CLASSE B
-  > 16.263 CLASSE A
-
- if (media > 16.263) {
-            div_msg.innerHTML = `<span style="color:green;"> CLASSE A </span>`;
-            div_msg.innerHTML += `<br> A renda média de cada adulto é R$ ${media}`;
-            id_img.src = "https://media0.giphy.com/media/bwLI2JHYHpD4c3UosX/giphy.gif";
-        } else {
-            if (media <= 16.263) {
-                div_msg.innerHTML = `<span style="color:grey;"> CLASSE B </span>`;
-                div_msg.innerHTML += `A renda média de cada adulto é R$${media}`;
-                id_img.src = "https://media0.giphy.com/media/bwLI2JHYHpD4c3UosX/giphy.gif";
-            } else if (media <= 5.223) {
-                div_msg.innerHTML = `<span style="color:blue;">CLASSE C </span>`;
-                div_msg.innerHTML += `A renda média de cada adulto é R$${media}`;
-            } else if (media <= 2.166) {
-                div_msg.innerHTML = `CLASSE D ou E`;
-                div_msg.innerHTML += `A renda média de cada adulto é R$${media}`;-->

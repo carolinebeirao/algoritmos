@@ -21,11 +21,12 @@
 </html>
 <script>
     function bt_analisar() {
-        if(temp.value < 22 || temp.value > 25)
-        div_msg.inneHTML = "Temperatura desconfortavel";
-        else 
-        div_msg.inneHTML = "Confortavel";
-        
+        var tempo = temp.value;
+        if(tempo >= 22 && tempo <= 25){
+            div_msg.innerHTML = 'Confortavel';
+        } else {
+          div_msg.innerHTML = `Temperatura desconfortavel`;
+        }         
     }
 </script>
 

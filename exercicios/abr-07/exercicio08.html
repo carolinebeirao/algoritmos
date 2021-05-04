@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8</title>
+</head>
+
+<body>
+    Selecione um hobby:
+    <select  id="combo" onchange="bt_ver()">
+        <option value="">Selecionar</option>
+        <option value="1">Dançar</option>
+        <option value="2">Jogar</option>
+        <option value="3">Assistir</option>
+        <option value="4">Ouvir</option>
+    </select>
+    <img id="id_img" src="" alt="">
+</body>
+
+</html>
+<script>
+     
+    function bt_ver() {
+        var comb = combo.value;
+        if (comb == 1) { 
+            id_img.src = "https://cdn.shopify.com/s/files/1/1061/1924/files/Dancer_With_Red_Dress_Emoji_400x400.png"; 
+        } else if (comb == 2) {
+            id_img.src = "https://cdn.shopify.com/s/files/1/1061/1924/files/Virus_Emoji_400x400.png"; 
+        } else if  (comb == 3) {
+            id_img.src = "https://cdn.shopify.com/s/files/1/1061/1924/files/Man_Bowing_Emoji_400x400.png";     
+        } else if (comb == 4){
+            id_img.src = "https://cdn.shopify.com/s/files/1/1061/1924/files/Sign_of_the_Horns_Emoji_400x400.png";    
+        } else {
+            id_img.src = "";
+        }
+
+    }
+
+    
+</script>

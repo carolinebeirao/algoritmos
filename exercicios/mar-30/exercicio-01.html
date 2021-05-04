@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+</head>
+<body>
+    <input id="renda_usua" type="number" placeholder="Digite a sua renda">
+    <br>
+    <input id="renda_fami" type="number" placeholder="Digite a renda da sua familia">
+    <button onclick="bt_verificar()" >Verificar ajuda</button>
+    <div id="div_msg">
+
+    </div>
+</body>
+</html>
+<script>
+    function bt_verificar() {
+        if (renda_usua.value <= 1500 && renda_fami.value <= 2100){
+          div_msg.innerHTML = "VOCÊ TERA DIREITO";  
+        } else {
+            div_msg.innerHTML = "VOCÊ NÃO TEM DIREITO";
+        }
+        
+    }
+</script>

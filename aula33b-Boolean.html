@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 33b - Boolean</title>
+</head>
+<body>
+     <!-- 
+        Receber a idade da pessoa e informar os estágios pelo qual essa pessoa já passou da seguinte forma:
+            Já passou pela infância: true/false
+            Já passou pela adolescência: true/false
+            Já é um idoso: true/false
+                TOTAL DE PONTOS: 99
+        Sendo que a infância é até os 12 anos, adolescência até os 18 anos, e o idoso é a partir dos 65 anos. 
+        Se já passou pela infância ganha 10 pontos, se já passou pela adolescência ganha 20 pontos 
+            e se é um idoso ganha 50 pontos
+        OBS: Se a pessoa não for idosa, emitir um alert com: "Você não pode usar as vagas especiais no shopping"         
+    -->
+
+    <h3>Análise de qual fase da Vida a pessoa está</h3>
+
+    Entre com a idade: <input id="ipt_idade" placeholder="Idade" autofocus>
+    <br><br>
+    <button onclick="analise()">Analise da Idade</button>
+    <br><br>
+    Já passou pela infância: <b id="b_infancia">?</b> <br>
+    Já passou pela adolescência: <b id="b_adolescencia">?</b> <br>
+    Já é um idoso: <b id="b_idoso">?</b>
+    <br><br>
+    TOTAL DE PONTOS: <b id="b_pontos">0</b>
+</body>
+</html>
+<script>
+    function analise() {
+        var ax_pontos = 0;
+        var ax_idade = Number(ipt_idade.value);
+
+        var ax_infancia = ax_idade > 12;
+        var ax_adolescencia = ax_idade >18;
+        var ax_idoso = ax_idade >= 65;
+
+        if (ax_infancia){
+            ax_pontos += 10;
+        }
+        if (ax_adolescencia) {
+            ax_pontos += 20;
+        }
+        if (ax_idoso) {
+            ax_pontos +=50;
+        }
+        if (!ax_idoso){
+            alert ("Você não pode usar as vagas especiais no shopping")
+        }
+
+        b_infancia.innerHTML = ax_infancia;
+        b_adolescencia.innerHTML = ax_adolescencia;
+        b_idoso.innerHTML = ax_idoso;
+        b_pontos.innerHTML = ax_pontos;
+        
+    }
+</script>

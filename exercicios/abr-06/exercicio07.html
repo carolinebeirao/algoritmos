@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7</title>
+</head>
+<body>
+    Digite uma frase :
+    <input id="id_frase" type="text" onkeyup="verificar()">
+    <div id="div_msg">
+
+    </div>
+</body>
+</html>
+<script>
+    
+    function verificar(){
+        var frase = id_frase.value;
+        div_msg.innerHTML += ` ${frase[frase.length-1]} <br>`; 
+    }
+</script>
