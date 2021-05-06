@@ -28,7 +28,8 @@
         var saldo = Number(ax_saldo.value);
         var debito = Number(ax_debito.value);
         result = saldo - debito;
-        if (result <= 0) {
+        neg = result <= 0;
+        if (neg) {
             msg.innerHTML = `<b style="color:red;"> o saldo atual da conta corrente é ${result} </b>`;
         } else {
             msg.innerHTML = `<i  style="color:blue;"> O saldo atual da conta corrente é ${result} </i> `;

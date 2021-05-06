@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+</head>
+
+<body>
+    Inserir nome:
+    <input type="text" id="x_nome">
+    <br><br>
+    Inserir Idade:
+    <input type="number" id="x_idade">
+    <br><br>
+    <button onclick="avaliar()">basico</button>
+    <button onclick="avaliar2()">alerta</button>
+    <button onclick="avaliar3()">variavel</button>
+    <!-- <button onclick="avaliar4()">Operador</button> -->
+</body>
+
+</html>
+
+<script>
+    function avaliar() {
+        var nome = x_nome.value;
+        var idade = Number(x_idade.value);
+        idade >= 18 ? alert(`${nome} vamos tirar a CNH?`) : alert(`${nome}, vai jogar PlayStation!`);
+    }
+
+
+    function avaliar2() {
+        var nome = x_nome.value;
+        var idade = Number(x_idade.value);
+        alert( idade >= 18 ? `${nome} vamos tirar a CNH?` : `${nome}, vai jogar PlayStation!`)
+    }
+
+    function avaliar3() {
+        var nome = x_nome.value;
+        var idade = Number(x_idade.value);
+        var ax_result = ( idade >= 18 ? `${nome} vamos tirar a CNH?` : `${nome}, vai jogar PlayStation!`)
+        alert(ax_result)
+    }
+
+
+</script>
+
+<!-- 1. Criar um programa em HTML/JS que auxilie uma 
+Autoescola a identificar possíveis novos alunos.
+
+a) Solicite o nome e a idade de uma pessoa;
+b) Ao clicar no botão "Avaliar aluno", 
+
+se a pessoa tiver 18 anos ou mais emita a mensagem "Xxxxxx vamos tirar a CNH?", 
+caso contrário emita a mensagem "Xxxxxx vai jogar PlayStation!"; -->

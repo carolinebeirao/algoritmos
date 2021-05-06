@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8</title>
+</head>
+<body>
+    Quanto tempo você deixou o arroz cozinhando ?
+    <input type="number" id="tempCozi" placeholder="em minutos">
+    <br><br>
+    <button onclick="bt_verificar()">Provar arroz</button>
+    <br><br>
+    <div id="msg">
+
+    </div>
+    <img src="" alt="" id="img">
+</body>
+</html>
+<script>
+    function bt_verificar(){
+        var temp = Number(tempCozi.value);
+        var resultsrc = temp == 5 ? img.src = "http://receitasdeminuto.com/wp-content/uploads/2018/09/como_fazer_arroz_perfeito.jpg" : img.src = "https://media.jcorreiodopovo.com.br/2014/11/1417113775.jpg" ;
+        var result = temp == 5 ? msg.innerHTML = "Parabéns! Arroz perfeito!" : msg.innerHTML = "Arroz cru ou cozido demais!" ;    
+    }
+</script>
+
+<!-- 8. Crie um programa em HTML/JS o qual:
+a) Pergunta o tempo que deixou o arroz cozinhando
+
+b) Ao clicar em "Provar arroz", verifica se o cozimento foi perfeito. 
+Um cozimento perfeito é de 5 minutos, exatamente
+
+c) Caso o cozimento tenha sido perfeito, exiba a frase "Parabéns!
+ Arroz perfeito!" e, abaixo dela, a imagem de um bonito arroz. Caso 
+ contrário, exiba a frase "Arroz cru ou cozido demais!" e, abaixo dela,
+  a imagem de um arroz "empapado" ou queimado -->

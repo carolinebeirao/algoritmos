@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10</title>
+</head>
+<body>
+    Quantas partidas jogou?
+    <input type="number" name="" id="partidas">
+    <br><br>
+    Gols marcados ?
+    <input type="number" name="" id="goals">
+    <br><br>
+    <button onclick="bt_estudar()">Estudar atacante</button>
+    <br><br>
+    <div id="msg"></div>
+    <img src="" alt="" id="img" width="200px">
+
+    
+</body>
+</html>
+<script>
+    function bt_estudar(){
+        var part = Number(partidas.value);
+        var gol = Number(goals.value);
+        var media =  gol / part ;
+        var resultsrc = media > 0.6 ?  img.src ="https://olhardigital.com.br/wp-content/uploads/2021/01/Cristiano-Ronaldo.jpg" :  media < 0.6 && media > 0.2 ?  img.src ="https://static-wp-tor15-prd.torcedores.com/wp-content/uploads/2018/06/sao-paulo-petros.jpg" :  img.src ="http://cdn.espn.com.br/thumb/622_1e228d8a-6dd6-39e6-bdd7-0bc3f9326b94.jpg" ;
+        var resultmsg = media > 0.6 ? msg.innerHTML  ="Atacante de futuro": media < 0.6 && media > 0.2 ? msg.innerHTML  ="Atacante mediano" : msg.innerHTML ="Melhor mudar de posição" ;
+    }
+</script>
+
+<!-- 10. Crie um programa em HTML/JS que analisa o desempenho de um atacante de futebol, o qual:
+
+a) Solicita a quantas partidas um atacante jogou
+
+b) Solicita quantos gols ele marcou
+
+c) Ao clicar em "Estudar atacante", calcule sua média de gols/partida
+
+d) Exiba, abaixo do botão:
+
+    A frase "Melhor mudar de posição" e a foto de um jogador de futebol bem ruim, caso a média for menor que 0.2
+
+    A frase "Atacante mediano" e a foto de um jogador de futebol comum, caso a média for entre 0.2 e 0.6
+
+    A frase "Atacante de futuro" e a foto de um bom jogador de futebol, caso a média for acima de 0.6
+
+e) Abaixo de tudo, exibir a frase "Sua média de gols/partida é de X" (onde X deve estar sempre com 1 casa decimal) -->

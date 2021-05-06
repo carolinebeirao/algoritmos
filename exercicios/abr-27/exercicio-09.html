@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9</title>
+</head>
+<body>
+    Insira sua primeira nota em algoritmos:
+    <input type="number" id="notas1">
+    <br><br>
+    Insira sua segunda nota em algoritmos:
+    <input type="number" id="notas2">
+    <br><br>
+    <button onclick="bt_verificar()">verificar</button>
+    <div id="msg">
+
+    </div>
+
+    
+</body>
+</html>
+<script>
+    function bt_verificar(){
+        var nota1 = Number(notas1.value);
+        var nota2 = Number(notas2.value);
+        var media = (nota1 + nota2) / 2;
+        var result = media < 6 ? msg.innerHTML = `Infelizmente reprovado  
+        <br> sua média é ${media}` : media > 7.5 ? msg.innerHTML = `Aprovado - Dev 
+         <br> sua média é ${media}`: msg.innerHTML =`Aprovado - Automação, Seg ou Testes <br> sua média é ${media}`;
+    }
+</script>
+
+<!-- 9. Crie um programa em HTML/JS o qual:
+
+a) Solicita as 2 notas do aluno em algoritmos
+
+b) Ao clicar num botão "Verificar resultado", calcule a média 
+entre as notas e exiba, na tela, uma dessas mensagens:
+
+   "Infelizmente reprovado" - Caso a média for menor que 6
+   "Aprovado - Automação, Seg ou Testes" - Caso a média for entre 6 e 7,5
+   "Aprovado - Dev" - Caso a média maior que 7,5 -->

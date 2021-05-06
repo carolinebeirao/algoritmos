@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6</title>
+</head>
+<body>
+    Digite a frequencia do aluno:
+    <input type="number" id="freqAluno">
+    <br><br>
+    <button onclick="bt_analisar()">Analisar</button>
+    <img id="img" src="" alt="">
+</body>
+</html>
+<script>
+    function bt_analisar(){
+        var freq = Number(freqAluno.value);
+        var result = freq < 75 ? img.src ="https://s.calendarr.com/upload/datas/di/at/dia-turista_c.jpg" : img.src ="https://static.quizur.com/i/b/5747891e74cc93.67717206pessoas-inteligentes.jpg" ; 
+    }
+</script>
+<!-- 
+6. Crie um programa em HTML/JS o qual:
+
+a) Solicita a frequência do aluno
+
+b) Ao clicar em "Analisar frequência", deve aparecer, abaixo dele:
+
+    A imagem de um turista, caso a frequência for menor que 75 OU
+    A imagem de um aluno estudioso, caso a frequência for a partir de 75 -->

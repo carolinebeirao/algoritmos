@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5</title>
+</head>
+
+<body>
+  Valor maximo para cada amigo ?
+  <input type="number" id="max_amigo">
+  <br><br>
+  Valor da pizza?
+  <input type="number" id="valorTotal">
+  <br><br>
+  Quantos amigos estão reunidos ?
+  <input type="number" id="qtd_amigos">
+  <br><br>
+  <button onclick="bt_calc()">Rola Pizza?</button>
+  <br><br>
+  <div id="msg">
+
+  </div>
+</body>
+
+</html>
+<script>
+  function bt_calc() {
+    var valorMax = Number(max_amigo.value);
+    var precoPizza = Number(valorTotal.value);
+    var qtdAmigos = Number(qtd_amigos.value);
+    var precoUnitario = precoPizza / qtdAmigos;
+    var result = precoUnitario <= valorMax ?  msg.innerHTML =  `Cada amigo vai pagar R$${precoUnitario} pela
+       pizza <br> Uhu! Vamos pedir a pizza!` :  msg.innerHTML = `Deu ruim! Pizza muito cara!`;
+
+  }
+
+</script>
+
+<!-- 5. Um grupo de amigos costuma (ou costumava, antes do Covid19)
+ a se reunir a casa de um deles para pedir e comer pizza. 
+ Só que eles sempre estabeleciam um valor máximo de investimento 
+ por amigo. Ajude eles criando um programa em HTML/JS o qual:
+
+a) Pergunte o valor máximo por amigo
+
+b) Pergunte o valor da pizza
+
+c Pergunte a quantidade de amigos reunidos
+
+d Ao clicar em "Rola a pizza?", calcule e exiba o valor
+ que cada amigo vai pagar na pizza com uma frase na página
+  como esta "Cada amigo vai pagar R$X pela pizza"
+
+  Cada amigo vai pagar R$X pela pizza
+
+d) Somente caso o valor por amigo passe do valor do item a), exiba
+ também a frase "Deu ruim! Pizza muito cara!", caso contrário,
+  deve aparecer a frase "Uhu! Vamos pedir a pizza!". -->

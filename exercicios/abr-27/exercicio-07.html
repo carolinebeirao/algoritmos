@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7</title>
+</head>
+<body>
+    Temperatura do ambiente:
+    <input type="number" id="tempe">
+    <br><br>
+    <button onclick="bt_analisar()">Verificar clima</button>
+    <br><br>
+    <img id="img" src="" alt="">
+    
+</body>
+</html>
+<script>
+    function bt_analisar(){
+        var temp = tempe.value;
+        var result = temp < 10 ?  img.src ="https://www.pfizer.com.br/sites/default/files/inline-images/alimentos-funcionais-o-que-sao-e-para-que-servem.jpg" :  img.src ="https://www.clickgratis.com.br/blog-clickgratis/wp-content/uploads/2016/03/allimentos-estragados.jpg";
+    }
+</script>
+
+<!-- 7. Crie um programa em HTML/JS o qual:
+
+a) Solicita a temperatura do ambiente
+
+b) Ao clicar em "Verificar clima", determine se a temperatura está:
+
+    Apropriada p/ conservar alimento - Caso a temperatura for menor que 10
+    Inapropriada p/ conservar alimento - Caso a temperatura for a partir de 10
+
+c) Em caso de temperatura apropriada, exiba a figura de um alimento em bom estado.
+ Caso contrário, exiba a imagem de um alimento estragado.
+
+OBS. Faça usando somente um Operador Ternário. -->

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 35</title>
+</head>
+<body>
+    <span id="span_frases"></span>
+</body>
+<!-- 
+    queremos mostrar 5 vezes um mesmo alert e na tela
+-->
+</html>
+ 
+<script>
+   
+    var contador = 0; // contagem de vezes que já mostrei o alert e na tela
+
+    span_frases.innerHTML = '';
+    /*
+
+    estrutura de REPETIÇÃO - while ("enquanto")
+
+    while (Condição de Repetição) {
+        Comandos
+    };
+
+    O teste lógico no while chama-se "Condição de Repetição"
+    Enquanto a "Condição de Repetição" for verdadeira (true)...
+        todo o bloco de comandos é executado novamente!
+        ao chegar no final, o while é testado novamente!
+        quando a "Condição de Repetição" for falsa (false), 
+        o bloco while deixa de ser executado
+
+    Neste caso:
+    Enquanto (contador < 5) for verdade (true) os comandos 
+        entre as chaves são executados
+        Quando (contador < 5) for false (true) encerra o while
+        
+    Se eu quiser que repita 20 vezes, basta troca 5 por 20 no while
+    */
+    while (contador < 5) { 
+        alert('O amor é lindo!');
+        span_frases.innerHTML += 'O amor é lindo! <br>';
+        contador++;
+    }
+    
+
+</script>
