@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+</head>
+<body>
+    <button onclick="bt_temp()">Temperaturas em São Paulo</button>
+    <br><br>
+    <div id="msg">
+
+    </div>
+    
+</body>
+</html>
+<script>
+    function bt_temp(){     
+        for( cont = -1; cont <= 39; cont++){
+            msg.innerHTML += `<br> ${cont}`;
+        }
+    }
+</script>
+
+<!-- 2. Crie um programa no qual, ao clicar num botão "Temperaturas em São Paulo",
+exibir valores de temperatura na tela, começando de -7 indo até 39,
+aumentando de 1 em 1 e um embaixo do outro.
+OBS: Use a estrutura "for"
+Ex:
+-7
+-6
+-5
+-4
+...
+
+37
+38
+39 -->

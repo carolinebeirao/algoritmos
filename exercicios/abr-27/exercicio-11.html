@@ -1,15 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>11</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>11</title>
 </head>
+
 <body>
-    
+  <div style="width: 100%;">
+    <div id="blue" style="height: 20px; background-color: blue; width:100%;"></div>
+    <div id="red" style="height: 20px; background-color: red; width:100%"></div>
+  </div>
+  <br><br>
+  <div id="msgNumPerd">
+  </div>
+  <div id="msgqtdPerd">
+  </div>
+  <br><br>
+  <button onclick="bt_sortear()">Porrada Aleatória</button>
+  <br><br>
+  <div id="msgcontador">
+  </div>
+  <br>
+  <div id="msgPorcentAzul">
+  </div>
+  <div id="msgPorcentVerm">
+  </div>
+  <div id="msg2">
+  </div>
+
+
 </body>
+
 </html>
+<script>
+  var bluew = 100;
+  var redw = 100;
+  var qtdGolpe = 0;
+
+  function bt_sortear() {
+    var aleato = Math.random() * 10 + 1; // retorna valores de 1 a 10 
+    var lutPerde = aleato >= 1 && aleato <= 5 ? "blue" : "red"; // se >= 1 e <=5 sera azul, se não sera vermelho
+    var forca = Math.random() * 21; // numero aleatorio entre 0 e 21 
+    var azul = bluew -= forca.toFixed(2); // width azul - forca
+    var vermelho = redw -= forca.toFixed(2); // width vermelho - froca
+    var venc = azul > vermelho ? "AZUL" : "VERMELHO"; // Esta vencendo
+
+    msgNumPerd.innerHTML = `N° Aleatorio ${parseInt(aleato)}, quem perde: ${lutPerde}`;
+    msgqtdPerd.innerHTML = `Quanto perde ${parseInt(forca)}`;
+    msgPorcentAzul.innerHTML = `${parseInt(azul)}% AZUL`;
+    msgPorcentVerm.innerHTML = `${parseInt(vermelho)}% VERMELHO`;
+    qtdGolpe++;
+    alerta = qtdGolpe % 5 == 0 ? alert(`O lutador ${venc} está vencendo`) : "";
+    msgcontador.innerHTML = `Quantidade de golpes: ${qtdGolpe}`;
+
+
+    if (azul < 0 || vermelho < 0) {
+      blue.style.width = `0%`;
+      red.style.width = `0%`;
+      alert(`O vencedor é o ${venc}`);
+      qtdGolpe = 0;
+      azul = 0;
+      vermelho = 0;
+
+    } else if (azul == 0 || vermelho == 0){
+      blue.style.width = `100%`;
+      red.style.width = `100%`;
+
+    } else if (lutPerde == 'blue' && azul > 0) {
+      blue.style.width = `${parseInt(azul)}%`; // tamanho do width atual
+
+    } else if (lutPerde == 'red' && vermelho > 0) {
+      red.style.width = `${parseInt(vermelho)}%`; // tamanho do width atual
+      
+    }
+  }
+
+
+
+
+</script>
 
 <!-- (desafio, opcional). Crie um programa em HTML/JS que simula um jogo de luta da seguinte forma:
 

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9</title>
+</head>
+<body>
+    <button onclick="bt_mostrar()">AMO O ESCUDO DO MEU TIME!</button>
+    <br><br><br>
+    <div id="msg">
+
+    </div>  
+</body>
+</html>
+<script>
+    
+    function bt_mostrar(){
+        cont = 0
+        msg.innerHTML = "";
+        while(cont < 7){
+            msg.innerHTML +=  `<img id="img2" src="https://img.elo7.com.br/product/original/29BC368/adesivo-escudo-sao-paulo-0-54cm-x-0-40cm.jpg" alt="" width="100px">`;
+            cont++
+        }
+    }
+</script>
+
+<!-- 9. Crie um programa em HTML/JS o qual:
+
+a) Tenha um botão "Amo o escudo do meu time!"
+
+b) Ao clicar nele, mostre na própria página 7 vezes
+ o mesmo escudo de um time de futebol (ou de LoL ou do esporte que quiser) -->

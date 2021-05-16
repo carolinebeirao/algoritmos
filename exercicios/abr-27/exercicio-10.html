@@ -26,8 +26,8 @@
         var part = Number(partidas.value);
         var gol = Number(goals.value);
         var media =  gol / part ;
-        var resultsrc = media > 0.6 ?  img.src ="https://olhardigital.com.br/wp-content/uploads/2021/01/Cristiano-Ronaldo.jpg" :  media < 0.6 && media > 0.2 ?  img.src ="https://static-wp-tor15-prd.torcedores.com/wp-content/uploads/2018/06/sao-paulo-petros.jpg" :  img.src ="http://cdn.espn.com.br/thumb/622_1e228d8a-6dd6-39e6-bdd7-0bc3f9326b94.jpg" ;
-        var resultmsg = media > 0.6 ? msg.innerHTML  ="Atacante de futuro": media < 0.6 && media > 0.2 ? msg.innerHTML  ="Atacante mediano" : msg.innerHTML ="Melhor mudar de posição" ;
+        var resultsrc = media > 0.6 ?  img.src ="https://olhardigital.com.br/wp-content/uploads/2021/01/Cristiano-Ronaldo.jpg" :  media < 0.2  ?  img.src ="http://cdn.espn.com.br/thumb/622_1e228d8a-6dd6-39e6-bdd7-0bc3f9326b94.jpg" :  img.src ="https://static-wp-tor15-prd.torcedores.com/wp-content/uploads/2018/06/sao-paulo-petros.jpg" ;
+        var resultmsg = media > 0.6 ? msg.innerHTML  ="Atacante de futuro":  media < 0.2 ? msg.innerHTML  ="Melhor mudar de posição" : msg.innerHTML ="Atacante mediano" ;
     }
 </script>
 

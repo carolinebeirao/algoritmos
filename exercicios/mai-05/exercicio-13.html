@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13</title>
+</head>
+
+<body>
+    Qual o número do qual deseja ter o fatorial?
+    <input type="number" id="fatorar">
+   
+    <br>
+    <br>
+    <button onclick="bt_fatorar()">Calcular fatorial</button>
+    <div id="msg">
+
+    </div>
+
+</body>
+
+</html>
+<script>
+
+    function bt_fatorar() {
+
+        var numF = fatorar.value;
+        msg.innerHTML = "";
+        for (cont = numF; cont >= numF ; numF--) {
+            msg.innerHTML += `<br> Fatorial de: ${cont}: ${cont} * ${numF}</span>`;
+        }
+    }
+</script>
+
+<!-- 13. Crie um programa que calcule e exiba o fatorial 
+de um número. Caso não lembre, o fatoral é assim:
+
+
+Fatorial de 5: 5x4x3x2x1
+Fatorial de 3: 3x2x1
+
+Pergunte na tela qual o número do qual deseja ter 
+o fatorial. Ao clicar num botão "Calcular fatorial",
+ exiba uma frase como esta abaixo dele, supondo que o usuário pediu o fatoral de 8:
+Fatorial de 8: 8x7x6x5x4x3x2x1 = 40320 -->

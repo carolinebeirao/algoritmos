@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10</title>
+</head>
+
+<body>
+    <button onclick="bt_contar()">Curto 3 e 5 </button>
+    <div id="msg"></div>
+</body>
+
+</html>
+<script>
+    function bt_contar() {
+
+        for (cont = 1; cont <= 100; cont++) {
+            result = cont % 3 == 0 && cont % 5 == 0 ? "É TRI! É PENTA!" : cont % 5 == 0 ? "É PENTA!" : cont % 3 == 0 ? "É TRI!" : `${cont}`;
+            msg.innerHTML += `<br> Dia ${cont} : <b> ${result} </b>`;
+
+        }
+    }
+
+
+</script>
+
+<!-- 10. Refaça a questão 11 da lista de While porém usando for -->

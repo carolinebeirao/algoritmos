@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12</title>
+</head>
+
+<body>
+    qual o valor que você vai depositar quando abrir a poupança?
+    <input type="number" id="valor">
+    <br><br>
+    por quantos meses esse valor vai ficar depositado?
+    <input type="number" id="meses">
+    <br><br>
+    <button onclick="bt_ver()">Ver investimento</button>
+    <div id="msg">
+
+    </div>
+
+
+</body>
+
+</html>
+<script>
+    function bt_ver() {
+        msg.innerHTML ="";
+        var mes = Number(meses.value);
+        var deposito = Number(valor.value);
+        for (cont = 0; cont <= mes; cont++) {
+            deposito = deposito + (deposito * 0.005);
+            msg.innerHTML += `<br> ${cont + 1}° mês: ${deposito}`;
+        }
+    }
+</script>
+
+<!-- 12. Crie um programa que simule quanto o dinheiro de uma pessoa 
+rende na poupança. Se você não sabe, a poupança aumenta de valor
+ uma vez por mês, em seu "aniversário" (por exemplo, se abriu a
+  poupança num dia 9, todo dia 9 ela aumenta um pouco de valor).
+
+Pergunte ao usuário qual o valor que ele vai depositar quando abrir
+ a poupança 
+ 
+ e por quantos meses esse valor vai ficar depositado.
+
+Ao clicar em "Ver investimento", deve aparecer o valor atualizado
+ da poupança em cada mês. Considere que a poupança rende 0,5% ao mês. 
+ Veja como ficaria no exemplo a seguir, supondo que o usuário informou
+  10000 e 7 meses.
+
+  Valor depositado: 10000.00
+  1º mês: 10050.00
+  2º mês: 10100.25
+  3º mês: 10150.75
+  4º mês: 10201.50
+  5º mês: 10252.51
+  6º mês: 10303.77
+  7º mês: 10355.29
+Note que o valor deve estar sempre com 2 casas decimais. -->

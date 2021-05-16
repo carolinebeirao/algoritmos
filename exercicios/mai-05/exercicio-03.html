@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+</head>
+
+<body>
+    Digite menor valor numerico:
+    <input type="number" id="menorv">
+    <br><br>
+    Digite o maior valor numérico:
+    <input type="number" id="maiorv">
+    <br><br>
+    Digite o ritmo de crescimento
+    <input type="number" id="crescv">
+    <br><br>
+    <button onclick="bt_ver()">Contagem loka</button>
+    <br><br>
+    <div id="msg">
+
+    </div>
+</body>
+
+</html>
+<script>
+    function bt_ver() {
+
+        var maior = Number(maiorv.value);
+        var menor = Number(menorv.value);
+        var cresc = Number(crescv.value);
+
+
+        for (num = maior; menor <= num; (num -= cresc)) {
+            msg.innerHTML += `<br> ${num}`;
+
+
+        }
+    }
+</script>
+
+<!-- 
+3. (Desafio) Crie um programa, usando for, o qual:
+
+a) Solicite o menor valor numérico
+
+b) Solicite o maior valor numérico
+
+c) Solicite o ritmo de crescimento
+
+d) Ao clicar em 'Contagem loka', deve aparecer na tela uma 
+contagem decrescente como esta:
+
+90
+85
+80
+75
+...
+10
+
+Nesse exemplo o menor número informado em a) foi 10,
+ o maior número informado em b) foi 90 e o ritmo informado em c) foi 5 -->

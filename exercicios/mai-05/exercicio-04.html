@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4</title>
+</head>
+
+<body>
+    Digite o número de sorteios:
+    <input type="number" id="sort">
+    <br><br>
+    <button onclick="bt_sortear()">Sortear a sorte</button>
+    <br><br>
+    <div id="msg">
+
+    </div>
+    <img id="foto" src="" width="100px">
+
+</body>
+
+</html>
+<script>
+    function bt_sortear() {
+        n_sorteio = sort.value;
+        msg.innerHTML = "";
+        foto.innerHTML = "";
+        for (cont = 0; n_sorteio > cont; cont++) {
+            var aleatorio = Math.random() * 10001;
+            var result = aleatorio <= 1000 ? `https://conteudo.imguol.com.br/c/entretenimento/54/2018/06/17/bebe-1529258521708_v2_450x450.jpg` : aleatorio >= 1001 && aleatorio <= 5000 ? `https://www.maisabracos.com.br/on/demandware.static/-/Sites-MaisAbracos_BR-Library/default/dwd3a7314a/images/articles/conhecendo-o-meu-bebe.jpg` : `http://marcelehannaan.com.br/wp-content/uploads/2016/08/Sorriso-Beb%C3%AA-Feliz-Alegre-Fofo-Carinha-Engra%C3%A7ada-Dentinho-Felicidade-Divertido-Baby-Smile-Fun-Hapiness.jpg`;
+            msg.innerHTML += `<br>${cont + 1}° Sorteio:  ${parseInt(aleatorio)} <br> <img  src="${result}" width="100px">`;
+        }
+    }
+
+</script>
+
+
+
+<!-- 4. Crie um programa, usando for, o qual:
+
+a) Pergunte o número de sorteios
+
+b) Ao clicar em 'Sortear a sorte', devem ser feitos X sorteios
+ (de acordo com o valor informado em a)). Os valores sorteados 
+ evem ser sempre entre 0 e 10000.  Para cada sorteio,
+    deve aparecer uma dessas imagens
+- De alguém chorando ou triste, caso o valor sorteado for de 0 a 1000
+- De alguém "ok", neutro, caso o valor sorteado for de mais de 1000 a 5000
+- De alguém muito feliz (pode ser aquele gif de jogar dinheiro com a mão), 
+caso o valor sorteado for mais de 5000
+Sempre exiba o valor sorteado acima da imagem.
+
+c) O resultado de cada sorteio (a imagem e o valor) devem aparecer um abaixo do outro -->
