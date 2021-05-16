@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 37</title>
+</head>
+<body>
+    
+    <div id="div_motivacao"></div>
+
+</body>
+</html>
+<script>
+
+/*
+O 'for', assim como o 'while' é uma estrutura de repetição
+Ele é composto por 3 partes:
+
+1 - Instrução inicial. Uma linha de código que será executada 1 só vez antes da 1ª execução do 'for'
+    No caso foi: 'var contador = 1'
+
+2 - Condição de repetição. Se true, executa o bloco do 'for', Se false, não executa.
+    No caso foi: 'contador <= 5'
+
+3 - É a última linha virtual do bloco 'for'. Ou seja, é uma instrução que sempre é executada ao final do bloco
+    No caso foi: 'contador++'
+
+*/
+    for (var contador = 1; contador <= 5; contador++) {
+        // var dobro = contador * 2;
+        div_motivacao.innerHTML += `o verdadeiro mestre é um eterno aprendiz <br>`;
+        // contador++
+    }
+
+</script>
+
+
+
+
+
