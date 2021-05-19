@@ -22,19 +22,15 @@
     var filmes = [];
     function cadastrar() {
         filmes.push(in_novoFilme.value);
-        for (cont = 0; cont < filmes.length; cont++) {
             var nome = in_novoFilme.value;
-            if (cont <= filmes.length) {
                 if (filmes.length % 2 == 0) {
                     div_exibir.innerHTML += `<br> <span style="color:blue"> ${nome}</span>`;
                 } else {
                     div_exibir.innerHTML += `<br> <span style="color:red">${nome}</span>`;
                 }
-            }
-
         }
 
-    }
+    
 
 
 </script>
