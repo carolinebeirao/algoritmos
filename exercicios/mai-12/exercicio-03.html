@@ -21,21 +21,17 @@
 <script>
     var filmes = [];
     function cadastrar() {
-         filmes.push(in_novoFilme.value);
+        filmes.push(in_novoFilme.value);
         for (cont = 0; cont < filmes.length; cont++) {
-           
-            var tamanho = filmes.length;
             var nome = in_novoFilme.value;
-            var ulti = filmes[-1]
-           
-            if (cont <= filmes.length) { 
+            if (cont <= filmes.length) {
                 if (filmes.length % 2 == 0) {
                     div_exibir.innerHTML += `<br> <span style="color:blue"> ${nome}</span>`;
                 } else {
                     div_exibir.innerHTML += `<br> <span style="color:red">${nome}</span>`;
                 }
-            } 
-            
+            }
+
         }
 
     }
