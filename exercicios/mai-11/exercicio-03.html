@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+</head>
+
+<body>
+    <button onclick="bt_ver()">VER MINHA SORTE</button>
+    <br>
+    <br>
+    <div>
+        <img id="image" src="" width="100px">
+        <div id="msg">
+
+        </div>
+    </div>
+    <br>
+    <div id="winner">
+
+    </div>
+
+
+
+</body>
+
+</html>
+<script>
+
+    function bt_ver() {
+        heart = 1;
+        cheap = 1;
+        msg.innerHTML = "";
+        for (cont = 1; cont <= 21; cont++) {
+            var result = heart > cheap ? "AMOR" : "JOGO";
+            var aleatorio = Math.random() * 2 + 1;
+            var pic = parseInt(aleatorio) == 1 ? "https://dhojeinterior.com.br/wp-content/uploads/2020/04/9iw6ko6ed8c00psht1scb8k9t.jpg" : "https://http2.mlstatic.com/D_NQ_NP_833416-MLB42060536800_062020-O.jpg";
+            if (parseInt(aleatorio) == 1 && cont < 21 && heart <= 10) {
+                // image.src = + `${pic}`;
+                // msg.innerHTML += ` ${cont} - ${heart++}° coração `;
+                msg.innerHTML += `<img  src="${pic}" width="100px"> <b>${cont}</b> - ${heart++}° coração `;
+            } else if (parseInt(aleatorio) == 2 && cont < 21 && cheap <= 10) {
+                // image.src = + `${pic}`;
+                // msg.innerHTML += ` ${cont} - ${cheap++}° baralho`;
+                msg.innerHTML += `<img  src="${pic}" width="100px"> <b>${cont}</b> - ${cheap++}° baralho`;
+            } else if (parseInt(aleatorio) == 1 && heart >= 11) {
+                // image.src = + `${pic}`;
+                // msg.innerHTML += `${cont} - ${heart++}° coração `;
+                msg.innerHTML += `<img  src="${pic}" width="100px"> <b>${cont}</b> - ${cheap++}° baralho`;
+                winner.innerHTML += `Você tem mais sorte no amor / Coração = ${heart }, Baralho = ${cheap } `;
+                break;
+            } else if (parseInt(aleatorio) == 2 && cheap >= 11) {
+                // image.src = + `${pic}`;
+                // msg.innerHTML += `${cont} - ${cheap++}° baralho`;
+                msg.innerHTML += ` <img  src="${pic}" width="100px"> <b>${cont}</b> - ${cheap++}° baralho`;
+                winner.innerHTML = `Você tem mais sorte no ${result} / Coração = ${heart }, Baralho = ${cheap } `;
+                break
+            } else if (parseInt(aleatorio) == 1 && cheap >= 11) {
+                winner.innerHTML = `Você tem mais sorte no ${result} / Coração = ${heart }, Baralho = ${cheap } `;
+
+            }
+        }
+    }
+
+</script>
+
+<!-- 3. Existe um dito popular que diz que se você tem sorte no amor tem azar 
+no jogo e vice-versa. Assim, crie um programa o qual:
+
+a) Tenha um botão "Ver minha sorte".
+
+b) Ao ser clicado, ele exibe, no máximo*, 21 imagens, uma ao
+ lado da outra. Essa imagens só podem ser ou de um coraçãozinho
+  ou de uma carta de baralho (deixe todas na mesma altura para 
+  ficar mais bonito na tela)
+
+A distribuição das imagens é aleatória. Ao final serão, no máximo*, 21 imagens,
+ entre corações e cartas, isso que importa
+
+c) Abaixo de todas a imagens, devem aparacer uma dessas mensagens:
+
+   "Você tem mais sorte no amor" caso tenham sido sorteados mais corações
+   "Você tem mais sorte no jogo" caso tenham sido sorteados mais cartas de baralho
+
+d) * - Porém... Caso o programa chegue a sortear 11 imagens de uma das 2 figuras
+ antes de 21 sorteios, interrompa imediatamente os sorteios (já que já se sabe o resultado).  -->

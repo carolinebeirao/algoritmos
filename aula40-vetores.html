@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 40</title>
+</head>
+<body>
+    
+    <input placeholder="Informe uma fruta" id="in_nova_fruta">
+    <button onclick="cadastrar()">Cadastrar</button>
+    
+    <br><br>
+
+    <input placeholder="Qual fruta quer achar?" id="in_pesquisa">
+    <button onclick="pesquisar()">Pesquisar</button>
+
+    <br>
+    <div id="div_pesquisa"></div>
+
+</body>
+</html>
+<script>
+
+    // aqui criamos um VETOR chamado 'frutas'
+    var frutas = []; // um vetor é sempre um par de colchetes
+    // neste caso, criamos um vetor vazio
+
+    function cadastrar() {
+        // aqui estamos inserindo um elemento no vetor
+        frutas.push(in_nova_fruta.value);
+    }
+
+    function pesquisar() {
+        var pesquisa = Number(in_pesquisa.value);
+        var pesquisa_verdadeira = pesquisa-1;
+
+        // .length retorna a quantidade de elementos que existem num vetor
+        if (pesquisa <= frutas.length) { // o tamanho do vetor é pelo menos o equivalente a 'pesquisa'?
+            var fruta_encontrada = frutas[pesquisa_verdadeira];
+            div_pesquisa.innerHTML = `A ${pesquisa}ª fruta cadastrada foi: ${fruta_encontrada}`;            
+        } else {
+            div_pesquisa.innerHTML = `Não existe uma ${pesquisa}ª fruta cadastrada!`;            
+        }
+    }
+
+</script>

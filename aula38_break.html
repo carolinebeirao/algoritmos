@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 38 - Break</title>
+</head>
+<body>
+    <!-- a) Pergunte ao usuário quantos números ele quer sortear
+        b) Ao clicar em "Sortear números", sorteie N números inteiros entre 0 e 100,
+        conforme o número indicado em a) - e exiba eles na tela, um embaixo do outro 
+        c) Se o número sorteado for divisivel por 7, interromper imediatamente o loop-->
+    -->
+
+
+
+
+
+
+
+    <h3>Aula 38 - Break </h3> 
+    Quantos números você pretende sortear: 
+    <input id="qtde" placeholder="Quantos números?" type="text"> 
+    <br><br>
+    <button onclick="sortear()">Sortear números</button> 
+    <br><br>
+    <div id="div_num"></div>
+</body>
+</html>
+<script>
+    function sortear() {
+       
+        var sorteado = 0;
+        var resto = 0;
+        div_num.innerHTML = "<b>Números Sorteados</b> <br>"; 
+        for (var contador = 0; contador < qtde.value; contador++ ) {
+            sorteado = (Math.random()*100).toFixed(0);
+            div_num.innerHTML += `${sorteado} <br>`;
+            resto = sorteado % 7;
+            if (resto == 0) {
+                break; // SE chegar nesta instrução, o loop MORRE imediatamente
+            }
+        }
+
+        
+        // Loop infinito com for
+        // for ( ; ; ) {
+        //     // .... comandos
+        // }
+
+
+        // Loop infinito com while
+        // while (true) {
+        //     // .... comandos
+        // }
+    }
+</script>

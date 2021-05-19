@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select id="combo">
+        <option value="">Selecione uma opção</option>
+        <option value="1">Marvel</option>
+        <option value="2">DC</option>
+    </select>
+    <br>
+    <br>
+    <button onclick="bt_ver()">Ver programação na TV</button>
+    <br>
+    <br>
+    <div id="msg">
+
+    </div>
+</body>
+
+</html>
+<script>
+
+    function bt_ver() {
+        msg.innerHTML = "";
+        var prefere = combo.value;
+        for (cont = 1; cont <= 6; cont++) {
+            var aleatorio = Math.random() * 2 + 1;
+            if (parseInt(aleatorio) == 1 && cont < 6) {
+                msg.innerHTML += `<br> Sortei N°${cont} = MARVEL`;
+                if (prefere == 1) {
+                    msg.innerHTML += `<br>Você verá um filme que gosta no ${cont}º dia`;
+                    break;
+                } else {
+                    msg.innerHTML += "";
+                }
+            } else if (parseInt(aleatorio) == 2 && cont < 6) {
+                msg.innerHTML += `<br> Sortei N°${cont} = DC`;
+                if (prefere == 2) {
+                    msg.innerHTML += `<br>Você verá um filme que gosta no ${cont}º dia`;
+                    break;
+                } else {
+                    msg.innerHTML += "";
+                }
+            } else if (cont == 6) {
+                msg.innerHTML += `<br> É, ou lê um livro ou assiste um filme que não gosta mesmo`;
+            }
+        }
+    }
+
+
+
+
+
+
+
+</script>
+
+<!-- //  4. Crie um programa em HTML/JS o qual:
+
+// a) Pergunte, numa combo, se o usuário prefere Marvel ou DC
+
+// b) Ao clicar num botão "Ver programação semanal na TV", o programa
+//  faz até 5 sorteios do filme do dia na programação da TV. Em cada 
+//  sorteio podem ser sorteados ou filme da Marvel ou da DC.
+
+// c) Se, num dos 5 sorteios for sorteado um filme da preferência do
+//  usuário, pare de fazer os sorteios e exiba na tela a frase "Você
+//   verá um filme que gosta no Xº dia", onde X é o sorteio (1º, 2º, 3º etc)
+
+// d) Se, em nenhum dos 5 sorteios for sorteado um filme do gosto do
+//  usuário, exiba na tela a frase "É, ou lê um livro ou assiste um filme que não gosta mesmo"  -->

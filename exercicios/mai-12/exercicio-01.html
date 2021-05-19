@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+</head>
+<body>
+    
+  <input placeholder="Informe um filme" id="in_novo_filme">
+  <button onclick="cadastrar()">Cadastrar</button>
+  
+  <br><br>
+  <button onclick="exibir()">exibir painel</button>
+  <br>
+  <div id="div_exibir"></div>
+
+</body>
+</html>
+<script>
+  var  filmes = [];
+  function cadastrar(){
+    filmes.push(in_novo_filme.value);
+  }
+
+  function exibir(){
+    // var exibir = Number(in_novo_filme.value);
+    // var exibirReal = exibir - 1;
+    if(filmes.length < 3 ){
+       div_exibir.innerHTML = `Seu filme favorito: ${filmes[0]}
+      <br> Seu 3º filme favorito: ainda não foi cadastrado 
+      <br> Total de filmes cadastrados: ${filmes.length}`;
+    } else {
+    div_exibir.innerHTML = `Seu filme favorito: ${filmes[0]}
+      <br> Seu 3º filme favorito:  ${filmes[2]}
+      <br> Total de filmes cadastrados: ${filmes.length}`;
+  }
+}
+
+</script>
+
+
+<!-- 
+1. Crie um programa em HTML/JS o qual:
+
+a) Usuário vai cadastrando os nomes de seus filmes 
+favoritos. Digita num campo e clica em "Cadastrar"
+
+b) Ele pode cadastrar quantos filmes quiser
+
+c) Quando o usuário clicar no botão “exibir painel”,
+ deve ser exibido ou atualizado um "painel" como neste 
+ exemplo:
+
+  Seu filme favorito: 50 tons de cinza
+
+  Seu 3º filme favorito: A era do gelo 1
+
+  Total de filmes cadastrados: 5
+
+ 
+
+OBS: no "3º filme", caso não tenham sido cadastrados 
+ainda 3 filmes, exibir "Ainda não existe".
+
+OBS: o "filme favorito" é o primeiro cadastrado -->
+
+ 

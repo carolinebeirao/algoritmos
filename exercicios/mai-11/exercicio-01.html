@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+</head>
+
+<body>
+    Digite o seu numero da sorte entre 0 e 100 :
+    <input type="number" id="nsorte">
+    <br>
+    <br>
+    <button onclick="bt_sorteio()">Testar minha sorte!</button>
+    <div id="msg">
+
+    </div>
+
+
+
+</body>
+
+</html>
+<script>
+
+
+    function bt_sorteio() {
+        msg.innerHTML = "";
+        for (cont = 0; cont < 30; cont++) {
+            var numSort = nsorte.value
+            var aleatorio = Math.random() * 100 + 1;
+            if (parseInt(aleatorio) == numSort) {
+                msg.innerHTML += `<br> Muito bem, você é uma pessoa de sorte!
+                  Seu número saiu no ${cont + 1}º sorteio`;
+                break
+            } else if (parseInt(aleatorio) != numSort && cont < 29) {
+                msg.innerHTML += `<br> ${cont + 1}° sorteio = ${parseInt(aleatorio)}`;
+            } else if (cont == 29 && cont != numSort) {
+                msg.innerHTML += `<br> ${cont + 1}° sorteio = ${parseInt(aleatorio)}
+                <br> É, você não tem muita sorte em sorteios, pelo visto`;
+            }
+        }
+
+    }
+
+
+
+
+</script>
+
+<!-- 1. Crie um programa em HTML/JS o qual:
+
+ OBS: use as instruções break e for
+
+ a) Solicite um "número" da sorte do usuário, entre 0 e 100 
+ (valor inteiro)
+
+ b) Tenha um botão "Testar minha sorte"
+
+ c) Ao clicar nele, sorteie até 30 vezes um número inteiro 
+ entre 0 e 100. Caso,
+  num desses 30 sorteios, seja sorteado o número da sorte, 
+  exiba na página a frase "Muito bem, você é uma pessoa de sorte!
+   Seu número saiu no Xº sorteio", onde X é o sorteio (1º, 2º, 3º etc)
+    no qual saiu o número.
+
+ d) Caso rolem os 30 sorteios e o número da sorte não saia, 
+ exiba na página a frase "É, você não tem muita sorte em sorteios, pelo visto" -->
